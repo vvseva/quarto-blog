@@ -1,0 +1,19 @@
+{
+  "hash": "be2ba1228f026f6d4d5f132e5c64fe75",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"about\"\nimage: profile.jpg\nabout:\n  template: solana\n  links:\n    - icon: twitter\n      text: Twitter\n      href: https://twitter.com\n    - icon: linkedin\n      text: LinkedIn\n      href: https://linkedin.com\n    - icon: github\n      text: Github\n      href: https://github.com\n---\n\n\n### This content appears above the formatted about page content.\n\n:::{#hero-heading}\n\nFinley Malloc is the Chief Data Scientist at Wengo Analytics. When not innovating on data platforms, Finley enjoys spending time unicycling and playing with her pet iguana.\n\n## Education\n\nUniversity of California, San Diego | San Diego, CA\nPhD in Mathematics | Sept 2011 - June 2015\n\nMacalester College | St. Paul MA\nB.A in Economics | Sept 2007 - June 2011\n\n## Experience\n\nWengo Analytics | Head Data Scientist | April 2018 - present\n\nGeoScynce | Chief Analyst | Sept 2012 - April 2018\n\n:::\n\n### This content appears below the formatted about page content.\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\nrequire(visNetwork, quietly = TRUE)\n```\n\n::: {.cell-output .cell-output-stderr}\n\n```\nWarning: package 'visNetwork' was built under R version 4.3.3\n```\n\n\n:::\n\n```{.r .cell-code}\n# minimal example\nnodes <- data.frame(id = 1:3)\nedges <- data.frame(from = c(1,2), to = c(1,3))\nvisNetwork(nodes, edges, width = \"100%\")\n```\n\n::: {.cell-output-display}\n\n```{=html}\n<div id=\"htmlwidget-0a43277c7e1f988477bc\" style=\"width:100%;height:480px;\" class=\"visNetwork html-widget\"></div>\n<script type=\"application/json\" data-for=\"htmlwidget-0a43277c7e1f988477bc\">{\"x\":{\"nodes\":{\"id\":[1,2,3]},\"edges\":{\"from\":[1,2],\"to\":[1,3]},\"nodesToDataframe\":true,\"edgesToDataframe\":true,\"options\":{\"width\":\"100%\",\"height\":\"100%\",\"nodes\":{\"shape\":\"dot\"},\"manipulation\":{\"enabled\":false}},\"groups\":null,\"width\":\"100%\",\"height\":null,\"idselection\":{\"enabled\":false},\"byselection\":{\"enabled\":false},\"main\":null,\"submain\":null,\"footer\":null,\"background\":\"rgba(0, 0, 0, 0)\"},\"evals\":[],\"jsHooks\":[]}</script>\n```\n\n:::\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {
+      "include-in-header": [
+        "<script src=\"site_libs/htmlwidgets-1.6.4/htmlwidgets.js\"></script>\n<link href=\"site_libs/vis-9.1.0/vis-network.min.css\" rel=\"stylesheet\" />\n<script src=\"site_libs/vis-9.1.0/vis-network.min.js\"></script>\n<script src=\"site_libs/visNetwork-binding-2.1.2/visNetwork.js\"></script>\n"
+      ]
+    },
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
