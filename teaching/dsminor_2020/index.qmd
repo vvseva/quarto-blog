@@ -1,0 +1,20 @@
+---
+title: "Data Science Minor"
+subtitle: "HSE University"
+author: "Invited Lecturer"
+date: "2020-09-01"
+categories: [HSE University, Data Science]
+# image: "image.jpg"
+---
+
+-   200 Students
+
+-   non-STEM
+
+-   tidyverse, tidymodels, shiny
+
+That was actually a super cool minor that consisted of 4 courses and guided students for 2 years from 0 to hero, but I can't formulate properly and find all relevant links. We had our own private online course on stepik, a chat with students, public group and so many things!
+
+Github package for personalized homework distribution: [vvseva/R3PO](https://github.com/vvseva/R3PO)
+
+some lecture slides about web application for data analysis (in Russian): [slides](https://docs.google.com/presentation/d/1-hb-cpMfvf9ivZw6Kcof0u0EP2k_bbG_CRnJ9kl4UVM/edit?usp=sharing)

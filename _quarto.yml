@@ -5,7 +5,8 @@ website:
   title: "Vsevolod Suschevskiy"
   navbar:
     right:
-      - about.qmd
+      - projects.qmd
+      - teaching.qmd
       - icon: github
         href: https://github.com/vvseva
       - icon: twitter

@@ -1,12 +1,44 @@
 ---
-title: "Projects"
-listing:
-  contents: posts
-  sort: "date desc"
-  type: grid
-  categories: true
-  sort-ui: false
-  filter-ui: false
-page-layout: full
-title-block-banner: true
+title: "about"
+image: profile.jpg
+about:
+  template: solana
+  links:
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com
+    - icon: linkedin
+      text: LinkedIn
+      href: https://linkedin.com
+    - icon: github
+      text: Github
+      href: https://github.com
 ---
+
+### This content appears above the formatted about page content.
+
+::: {#hero-heading}
+Please call me Seva; here is my [CV](https://github.com/vvseva/cv/raw/master/Vsevolod_Suschevskiy_CV.pdf).
+
+In general, I like what Computational Social Science claims to be, especially inferring human behaviour either with Agent-Based Modeling and/or virtual labs (a.k.a. digital experiments), where networks serve as a computational representation of a social structure .
+
+## Bio
+
+In Summer 2022, I joined [Technology and Social Behaviour](https://tsb.northwestern.edu/) at Northwestern University where I work as a research assistant at [SONIC](http://sonic.northwestern.edu/). I use social network analysis models to understand mechanism of interaction and communication in human-AI teams.
+
+Before that, I worked as a research assistant at [Universitetet i Bergen](https://www.uib.no/en/persons/Vsevolod.Suschevskiy). Together with Mohammad Khalil at [SLATE](https://slate.uib.no/), we created CERES – a virtuall lab to study course recommendation system. We even published a [paper](https://www.researchgate.net/publication/350874550_Creating_a_Course_Recommendation_System_for_Exchange_Students) about the first iteration, but we also managed to launch and analyze a pilot experiment with real students. Furthermore, I worked on analyzing classroom intervention with mixed models and SEMs. *(one day it will be published)*
+
+Also, I was a moderate [Computer’ish Science](https://spb.hse.ru/en/ma/computer/) student at HSE University. I worked with Ilya Musabirov, and my thesis reacived a research grant from Toloka to explore the effect of self nudges on motivation.
+
+Last, but not for the amount of time it required, I worked as (1) an invited lecturer at [Data Science minor](https://electives.hse.ru/minor_data_spb/) at the same HSE University. The course was mostly a mix of CSS and intro to data science for 200 non-STEM students, so we are talking about *tidyverse*, *tidymodels*, and *shiny*. In addition, (2) an invited lecturer for a graduate-level course – Into to Small Data Science for Political Science students. And (3) an invited co-lecturer for a Data Visualization course with [Anastasia Kuznetsova](https://t.me/nastengraph) at [European University at St. Petersburg](https://eusp.org/programs/applied-data-analysis). *(At some point, some materials will be available at ...)*
+:::
+
+### Test of visnetwork
+
+```{r}
+require(visNetwork, quietly = TRUE)
+# minimal example
+nodes <- data.frame(id = 1:3)
+edges <- data.frame(from = c(1,2), to = c(1,3))
+visNetwork(nodes, edges, width = "100%")
+```
