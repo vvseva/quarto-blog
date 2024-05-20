@@ -1,6 +1,6 @@
 ---
 title: "about"
-image: profile.jpg
+image: icon/do-not-save-me.jpg
 about:
   template: solana
   links:
@@ -15,11 +15,11 @@ about:
       href: https://github.com
 ---
 
-### This content appears above the formatted about page content.
+### 
 
-::: {#hero-heading}
 Please call me Seva; here is my [CV](https://github.com/vvseva/cv/raw/master/Vsevolod_Suschevskiy_CV.pdf).
 
+::: {#hero-heading}
 In general, I like what Computational Social Science claims to be, especially inferring human behaviour either with Agent-Based Modeling and/or virtual labs (a.k.a. digital experiments), where networks serve as a computational representation of a social structure .
 
 ## Bio

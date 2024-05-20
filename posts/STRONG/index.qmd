@@ -1,0 +1,11 @@
+---
+title: "Human-AI teams"
+author: "Vsevolod Suschevskiy"
+date: "2024-05-18"
+categories: [experiment]
+image: "CODE2023 STRONG.jpg"
+---
+
+This study investigates the emergent network dynamics within human-AI teams, focusing on the interplay between human-human and human-AI collaborations. Grounded in the Computers are Social Actors (CASA) paradigm and recent discourse challenging the exclusion of AI from team networks, we examine the influence of individual human characteristics, AI attributes, and network mechanisms on team interactions. Utilizing a virtual laboratory experiment with 99 teams comprising 250 individuals and AI teammates, we manipulated AI functionality across four conditions—taskwork, teamwork, combined, and naturalistic—to assess their impact on team processes. Our findings reveal that AI agents in teamwork roles are perceived as less effective by human teammates, while human perceptions of their peers are influenced by homophily in their ego-centric networks, particularly regarding age and education. Interestingly, human teammates are deemed more effective when the AI assumes a teamwork role. Moreover, positive perceptions of human teammates correlate with similar perceptions of AI, suggesting a transference effect. These insights contribute to our understanding of the complex interdependencies within human-AI teams and pave the way for novel social network analyses that consider the influence of ego-centric networks on collaboration with AI.
+
+![Demo](demo.gif){fig-alt="Empirica interface demo"}

@@ -16,8 +16,9 @@ website:
 format:
   html:
     theme: 
-      - sketchy
-      - sketchy_custom.scss
+      - litera
+      - litera_custom.scss
+      # - sketchy_custom.scss
       # - quartz
     mainfont: "Lato"
     # css: styles.css

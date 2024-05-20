@@ -57,7 +57,7 @@ $border-radius-sm:          15px !default;
 // stylelint-disable-next-line value-keyword-case
 $font-family-sans-serif:      Neucha, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
 $font-weight-base:            700 !default;
-$headings-font-family:        "Cabin Sketch", cursive !default;
+$headings-font-family:        "BlinkMacSystemFont", !default;
 
 $blockquote-small-color:      $gray-800 !default;
 
@@ -87,7 +87,7 @@ $dropdown-link-hover-bg:            $gray-600 !default;
 
 $nav-tabs-border-color:             $gray-800 !default;
 $nav-tabs-link-hover-border-color:  $gray-600 !default;
-$nav-tabs-link-active-color:        $gray-600 !default;
+$nav-tabs-link-active-color:        $gray-800 !default;
 $nav-tabs-link-active-border-color: $gray-600 !default;
 
 // Navbar
@@ -204,7 +204,6 @@ $border-radius-sm-sketchy: 255px 25px 225px 25px / 25px 225px 25px 255px;
   &-brand {
     font-family: $headings-font-family;
     font-weight: 400;
-    text-decoration: none;
   }
 }
 
@@ -707,18 +706,22 @@ pre {
 }
 
 .nav-link {
-    color: $gray-600; // Set the desired color
+    color: $gray-600;
         &:hover {
-      color: $gray-600; // Set the hover color
+      color: $gray-600; 
     }
 }
 
 .aa-SubmitIcon {
-  fill: $gray-800; // Set the color for the SVG icon
+  fill: $gray-800; 
+}
+
+.navbar-toggler {
+  fill: $gray-800; 
 }
 
 #quarto-margin-sidebar {
   .category.active {
-    color: $gray-600; // Set the desired color for the active category
+    color: $gray-600; 
   }
 }
