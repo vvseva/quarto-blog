@@ -14,15 +14,18 @@ download.file(
   mode = "wb")
 ```
 
-```{=html}
+::: {#avoid_rmd}
 <p class="text-center">
-  <a class="btn btn-primary" 
-  href="Vsevolod_Suschevskiy_CV.pdf" target="_blank">
-    <i class="fa-solid fa-file-arrow-down"></i>&ensp;Download current CV
-  </a>
+<center>
+<a class="btn btn-primary" 
+  href="Vsevolod_Suschevskiy_CV.pdf" target="_blank"> 
+  <i class="fa-solid fa-file-arrow-down"></i> Download current CV </a>
+</center>
 </p>
 
-<div class="embed-container">
-  <iframe src="Vsevolod_Suschevskiy_CV.pdf" style="border: 0.5px"></iframe>
-</div>
-```
+:::
+
+::: embed-container
+<iframe src="Vsevolod_Suschevskiy_CV.pdf" style="border: 0.5px"></iframe>
+:::
+
