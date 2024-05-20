@@ -7,34 +7,10 @@ freeze: false
 ---
 
 ```{r}
-#| echo: false
-#| show: false
-
 download.file(
   url = "https://github.com/vvseva/cv/raw/master/Vsevolod_Suschevskiy_CV.pdf", 
   destfile = "Vsevolod_Suschevskiy_CV.pdf",
   mode = "wb")
-```
-
-```{css}
-/*| echo: false */
-.embed-container { 
-    position: relative;
-    padding-bottom: 129%;
-    height: 0;
-    overflow: hidden;
-    max-width: 100%;
-}
-
-.embed-container iframe,
-.embed-container object,
-.embed-container embed {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
 ```
 
 ```{=html}
