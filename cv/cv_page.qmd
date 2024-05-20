@@ -16,13 +16,8 @@ download.file(
   mode = "wb")
 ```
 
-```{css, echo=FALSE}
-#title-block-header .description {
-    display: none;
-}
-```
-
-```{css echo=FALSE}
+```{css}
+/*| echo: false */
 .embed-container { 
     position: relative;
     padding-bottom: 129%;

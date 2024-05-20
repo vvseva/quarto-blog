@@ -6,25 +6,28 @@ about:
   links:
     - icon: twitter
       text: Twitter
-      href: https://twitter.com
+      href: https://twitter.com/vvsuschevskiy
+      target: _blank
     - icon: linkedin
       text: LinkedIn
-      href: https://linkedin.com
+      href: https://www.linkedin.com/in/vvsuschevskiy/
+      target: _blank
     - icon: github
       text: Github
-      href: https://github.com
+      href: https://github.com/vvseva
+      target: _blank
 ---
 
 ### 
 
-Please call me Seva; here is my [CV](https://github.com/vvseva/cv/raw/master/Vsevolod_Suschevskiy_CV.pdf).
+Please call me Seva; here is my [CV](cv/cv_page.html).
 
 ::: {#hero-heading}
 In general, I like what Computational Social Science claims to be, especially inferring human behaviour either with Agent-Based Modeling and/or virtual labs (a.k.a. digital experiments), where networks serve as a computational representation of a social structure .
 
 ## Bio
 
-In Summer 2022, I joined [Technology and Social Behaviour](https://tsb.northwestern.edu/) at Northwestern University where I work as a research assistant at [SONIC](http://sonic.northwestern.edu/). I use social network analysis models to understand mechanism of interaction and communication in human-AI teams.
+In Summer 2022, I joined [Technology and Social Behaviour](https://tsb.northwestern.edu/){target: _blank=""} at Northwestern University where I work as a research assistant at [SONIC](http://sonic.northwestern.edu/). I use social network analysis models to understand mechanism of interaction and communication in human-AI teams.
 
 Before that, I worked as a research assistant at [Universitetet i Bergen](https://www.uib.no/en/persons/Vsevolod.Suschevskiy). Together with Mohammad Khalil at [SLATE](https://slate.uib.no/), we created CERES – a virtuall lab to study course recommendation system. We even published a [paper](https://www.researchgate.net/publication/350874550_Creating_a_Course_Recommendation_System_for_Exchange_Students) about the first iteration, but we also managed to launch and analyze a pilot experiment with real students. Furthermore, I worked on analyzing classroom intervention with mixed models and SEMs. *(one day it will be published)*
 

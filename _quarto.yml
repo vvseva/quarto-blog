@@ -9,10 +9,13 @@ website:
       - teaching.qmd
       - icon: github
         href: https://github.com/vvseva
+        target: _blank
       - icon: twitter
         href: https://twitter.com/vvsuschevskiy
+        target: _blank
       - icon: linkedin
         href: https://www.linkedin.com/in/vvsuschevskiy
+        target: _blank
 format:
   html:
     theme: 
