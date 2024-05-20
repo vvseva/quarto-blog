@@ -3,10 +3,11 @@ title: Curriculum vitæ
 description: "vsevolod Suschevskiy's CV"
 date: 2024-02-28
 published-title: CV last updated
-freeze: false
+freeze: true
 ---
 
 ```{r}
+#| echo: false
 download.file(
   url = "https://github.com/vvseva/cv/raw/master/Vsevolod_Suschevskiy_CV.pdf", 
   destfile = "Vsevolod_Suschevskiy_CV.pdf",
