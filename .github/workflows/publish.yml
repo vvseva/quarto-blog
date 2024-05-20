@@ -13,7 +13,7 @@ jobs:
         uses: actions/checkout@v4 
         
       - name: Install rmarkdown
-        run: Rscript -e "install.packages('rmarkdown', repos='https://packagemanager.posit.co/cran/latest/src/contrib/rmarkdown_2.27.tar.gz')"
+        run: Rscript -e "install.packages('rmarkdown')"
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
