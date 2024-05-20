@@ -3,7 +3,6 @@ title: Curriculum vitæ
 description: "vsevolod Suschevskiy's CV"
 date: 2024-02-28
 published-title: CV last updated
-engine: knitr
 freeze: false
 ---
 
@@ -24,7 +23,7 @@ download.file(
 ```
 
 ```{css echo=FALSE}
-.embed-container {
+.embed-container { 
     position: relative;
     padding-bottom: 129%;
     height: 0;
