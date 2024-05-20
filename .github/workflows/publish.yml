@@ -11,6 +11,9 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v4 
+        
+      - name: Install rmarkdown
+        run: Rscript -e "install.packages('rmarkdown', repos='https://packagemanager.posit.co/cran/__linux__/jammy/latest')"
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
