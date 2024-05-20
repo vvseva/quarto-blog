@@ -5,8 +5,6 @@ date: 2024-02-28
 published-title: CV last updated
 engine: knitr
 freeze: false
-cv:
-  pdf: "Vsevolod_Suschevskiy_CV.pdf"
 ---
 
 ```{r}
@@ -48,12 +46,12 @@ download.file(
 ```{=html}
 <p class="text-center">
   <a class="btn btn-primary" 
-  href="`r rmarkdown::metadata$cv$pdf`" target="_blank">
+  href="Vsevolod_Suschevskiy_CV.pdf" target="_blank">
     <i class="fa-solid fa-file-arrow-down"></i>&ensp;Download current CV
   </a>
 </p>
 
 <div class="embed-container">
-  <iframe src="`r rmarkdown::metadata$cv$pdf`" style="border: 0.5px"></iframe>
+  <iframe src="Vsevolod_Suschevskiy_CV.pdf" style="border: 0.5px"></iframe>
 </div>
 ```
