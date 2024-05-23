@@ -39,7 +39,6 @@ Last, but not for the amount of time it required, I worked as (1) an invited lec
 ### Test of visnetwork
 
 ```{r}
-#| echo = False
 require(visNetwork, quietly = TRUE)
 # minimal example
 nodes <- data.frame(id = 1:4,
