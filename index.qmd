@@ -20,10 +20,10 @@ about:
 
 ### 
 
-Please call me Seva; here is my [CV](cv/cv_page.html).
+Please call me Seva (SEH-vah: "SEH" as in "set", and "vah" rhymes with "spa"); here is my [CV](cv/cv_page.html).
 
 ::: {#hero-heading}
-In general, I like what Computational Social Science claims to be, especially inferring human behaviour either with Agent-Based Modeling and/or virtual labs (a.k.a. digital experiments), where networks serve as a computational representation of a social structure .
+In general, I like what Computational Social Science claims to be, especially inferring human behaviour either with Agent-Based Modeling and/or virtual labs (a.k.a. digital experiments), where networks serve as a computational representation of a social structure.
 
 ## Bio
 
@@ -33,7 +33,7 @@ Before that, I worked as a research assistant at [Universitetet i Bergen](https:
 
 Also, I was a moderate [Computer’ish Science](https://spb.hse.ru/en/ma/computer/) student at HSE University. I worked with Ilya Musabirov, and my thesis reacived a research grant from Toloka to explore the effect of self nudges on motivation.
 
-Last, but not for the amount of time it required, I worked as (1) an invited lecturer at [Data Science minor](https://electives.hse.ru/minor_data_spb/) at the same HSE University. The course was mostly a mix of CSS and intro to data science for 200 non-STEM students, so we are talking about *tidyverse*, *tidymodels*, and *shiny*. In addition, (2) an invited lecturer for a graduate-level course – Into to Small Data Science for Political Science students. And (3) an invited co-lecturer for a Data Visualization course with [Anastasia Kuznetsova](https://t.me/nastengraph) at [European University at St. Petersburg](https://eusp.org/programs/applied-data-analysis). *(At some point, some materials will be available at ...)*
+Last, but not for the amount of time it required, I worked as (1) an invited lecturer at [Data Science minor](https://electives.hse.ru/minor_data_spb/) at the same HSE University. The course was mostly a mix of CSS and intro to data science for 200 non-STEM students, so we are talking about *tidyverse*, *tidymodels*, and *shiny*. In addition, (2) an invited lecturer for a graduate-level course – Into to Small Data Science for Political Science students. And (3) an invited co-lecturer for a Data Visualization course with [Anastasia Kuznetsova](https://t.me/nastengraph) at [European University at St. Petersburg](https://eusp.org/programs/applied-data-analysis). *(At some point, some materials will be available [somewhere here](/teaching.html))*
 :::
 
 ### Test of visnetwork
