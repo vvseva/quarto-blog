@@ -3,7 +3,7 @@ title: "Friendship and Social Grooming in VK"
 author: "Vsevolod Suschevskiy"
 date: "2021-07-015"
 categories: [SNA, internship]
-image: "dunbar_flowss.png"
+image: "dunbar_flows.png"
 ---
 
 In the summer of 2021, I got an internship at the most heavily loaded social networking service in post-soviet space – [vk.com](https://vk.com/about).
