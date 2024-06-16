@@ -1,0 +1,19 @@
+---
+title: "Replicative experiments"
+author: "Vsevolod Suschevskiy"
+date: "2024-06-01"
+categories: [experiment, open science]
+image: "proposal.png"
+---
+
+If we can agree that there is a need for reproducibility of scientific results, and when we learned that a single study or even an experiment with null hypothesis significance provides limited evidence about the true data generating process. Thus, we need to design studies with reproducibility-first in mind i.e. replicative experiments.
+
+That was my final paper for the course "Explanation and reproducibility in data-driven science" by Jessica Hullman.
+
+::: {div}
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRBTfq0NCUlcoCWyNm6zJZLd8yzL_YeXOHwACqzrOz8q88Kmn2EgbpXcQpQMdBVSyq6Oxp6T6Ix-ebs/embed?start=false&amp;loop=false&amp;delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true">
+
+</iframe>
+
+</iframe>
+:::

@@ -1,0 +1,18 @@
+---
+title: "CERES"
+author: "Vsevolod Suschevskiy"
+date: "2020-04-20"
+categories: [experiment]
+---
+
+I was working as a RA at University of Bergen and created a course recommendation systems, using R Shiny that was integrated with Elasticsearch and doc2vec embedding model. [Poster](https://www.researchgate.net/profile/Vsevolod-Suschevskiy-2/publication/350874550_Creating_a_Course_Recommendation_System_for_Exchange_Students/links/607fdaa98ea909241e12687c/Creating-a-Course-Recommendation-System-for-Exchange-Students.pdf).
+
+![](sequence%20diagram.png)
+
+The interface included a small survey about motivations and priorities of exchange students, a small AB test of recommendation algorithms (tf-idf vs embeddings) and an actual course search system. We presented some initial results at International Conference on Learning Analytics & Knowledge (LAK21).
+
+![](ceres.jpg)
+
+Some preliminary results from the survey about important factors for an exchange term.
+
+![](likert.png)
