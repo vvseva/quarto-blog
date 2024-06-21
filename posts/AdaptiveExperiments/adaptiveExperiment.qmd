@@ -6,4 +6,12 @@ categories: [SNA, internship]
 image: "netlogo.png"
 ---
 
-[(Netlogo Web Model)](AdaptiveVSRandom.html)
+::: {div}
+File is here <a href="./AdaptiveVSRandom.nlogo" target="_blank">Netlogo Web Model Code</a>
+:::
+
+::: {div}
+<iframe src="https://www.netlogoweb.org/launch#https://www.netlogoweb.org" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true">
+
+</iframe>
+:::
