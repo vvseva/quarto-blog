@@ -1,0 +1,9 @@
+---
+title: "Adaptive Experiment NetLogo"
+author: "Vsevolod Suschevskiy"
+date: "2024-07-21"
+categories: [SNA, internship]
+image: "netlogo.png"
+---
+
+[(Netlogo Web Model)](AdaptiveVSRandom.html)
