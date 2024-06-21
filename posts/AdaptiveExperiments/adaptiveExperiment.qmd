@@ -6,6 +6,8 @@ categories: [experiment, ABM]
 image: "netlogo.png"
 ---
 
+![A small demo of the model](adaptive.gif)
+
 ::: {div}
 File is here <a href="./AdaptiveVSRandom.nlogo" target="_blank">Netlogo Web Model Code</a>
 :::
