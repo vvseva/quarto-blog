@@ -21,11 +21,11 @@ about:
 ### 
 
 ::: {div}
-Please call me Seva <input type="checkbox" id="cb1" /><label for="cb1"><sup></sup></label><br><br>(SEH-vah: "SEH" as in "set", and "vah" rhymes with "spa");.<br><br> here is my [CV](cv/cv_page.html).
+Please call me Seva <input type="checkbox" id="cb1" /><label for="cb1"><sup></sup></label><span><br><br>(SEH-vah: "SEH" as in "set", and "vah" rhymes with "spa");.<br><br></span> here is my [CV](cv/cv_page.html).
 :::
 
 ::: {#hero-heading}
-I study how to improve human-AI teamwork in teams and organizations. I combine the lenses of analytical sociology and human-computer interaction to understand the mechanisms of computer-supported collaborative work. To do that, I build virtual lab experiments where I can look at digital traces and ask ego-centric questions. Finally, I use social network analysis to untangle the social structure in human-AI teams. I am also passionate about the Open Science movement, especially the idea of integrative experiments. Recently I have worked as a replicator for a massive open collaboration project and participated in the replication Game.
+I study how to improve human-AI teamwork in teams and organizations. I combine the lenses of analytical sociology and human-computer interaction to understand the mechanisms of computer-supported collaborative work. To do that, I build virtual lab experiments where I can look at digital traces and ask ego-centric questions. Finally, I use social network analysis to untangle the social structure in human-AI teams. I am also passionate about the Open Science movement, especially the idea of integrative experiments. Recently, I have worked as a replicator for a massive open collaboration project and participated in a replication game at Northwestern.
 
 ## Bio
 
