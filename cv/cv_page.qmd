@@ -16,16 +16,15 @@ download.file(
 
 ::: {#avoid_rmd}
 <p class="text-center">
-<center>
-<a class="btn btn-primary" 
-  href="Vsevolod_Suschevskiy_CV.pdf" target="_blank"> 
-  <i class="fa-solid fa-file-arrow-down"></i> Download current CV </a>
-</center>
-</p>
 
+<center><a class="btn btn-primary" 
+  href="Vsevolod_Suschevskiy_CV.pdf" target="_blank"> <i class="fa-solid fa-file-arrow-down"></i> Download current CV </a></center>
+
+</p>
 :::
 
 ::: embed-container
-<iframe src="Vsevolod_Suschevskiy_CV.pdf" style="border: 0.5px"></iframe>
-:::
+<iframe src="Vsevolod_Suschevskiy_CV.pdf" style="border: 0.5px">
 
+</iframe>
+:::
