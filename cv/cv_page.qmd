@@ -1,7 +1,7 @@
 ---
 title: Curriculum vitæ
 description: "vsevolod Suschevskiy's CV"
-date: 2024-02-28
+date: 2024-07-01
 published-title: CV last updated
 freeze: true
 ---
