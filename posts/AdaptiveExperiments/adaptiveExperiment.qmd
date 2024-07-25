@@ -8,12 +8,9 @@ image: "netlogo.png"
 
 ![A small demo of the model](adaptive.gif)
 
-::: {div}
-File is here <a href="./AdaptiveVSRandom.nlogo" target="_blank">Netlogo Web Model Code</a>
-:::
 
 ::: {div}
-<iframe src="https://www.netlogoweb.org/launch#https://www.netlogoweb.org" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true">
+<iframe src="https://vvseva.github.io/adaptive-vs-random/AdaptiveVSRandom.html" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true">
 
 </iframe>
 :::
