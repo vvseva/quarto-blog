@@ -10,11 +10,7 @@ image: "streamlit.png"
 
 Do you like looking at a Cellural Automata? Here is a simple example of multiple LLMs talking with each other in a group chat. You will need an OpenAI api key that I promise not to steal from you, since I have not figure out the persistent data storage in streamlit yet.
 
-::: {div}
-<iframe src="https://chat-simulation-4pmwgfz34xrz3ztkrrhg8c.streamlit.app/" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true">
-
-</iframe>
-:::
+[demo](https://chat-simulation-4pmwgfz34xrz3ztkrrhg8c.streamlit.app/)
 
 Picture just in case.
 
