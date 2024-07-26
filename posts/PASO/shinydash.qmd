@@ -1,0 +1,13 @@
+---
+title: "Network Dashboard"
+author: "Vsevolod Suschevskiy"
+date: "2024-07-25"
+categories: [simulation, interactive, SNA]
+image: "network_dash.gif"
+---
+
+# Multi-Agent Simulation
+
+A quick shiny dashboard with a network visualization of a communication network in imaginary company. Demo should be available at [shinyapps](https://vvseva.shinyapps.io/paso_dash/)
+
+![](network_dash.gif)
