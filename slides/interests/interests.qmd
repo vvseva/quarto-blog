@@ -131,6 +131,60 @@ format:
 
 ##  {auto-animate="true" auto-animate-easing="ease-in-out"}
 
+::: {.absolute data-id="box1" style="background: #66c2a5; width: 350px; height: 150px;" top="200" left="0"}
+::: {.div .content}
+Computational Social Science
+:::
+:::
+
+##  {auto-animate="true" auto-animate-easing="ease-in-out"}
+
+::: columns
+::: {.column width="33%"}
+::: {.absolute data-id="box1" style="background: #66c2a5; width: 350px; height: 150px;"}
+::: {.div .content}
+Computational Social Science
+:::
+:::
+:::
+:::
+
+::: {.absolute data-id="box3" style="background: #8da0cb; width: 350px; height: 150px;" top="200" left="0" auto-animate-delay="0.1"}
+::: {.div .content}
+Human-Computer Interactions
+:::
+:::
+
+
+##  {auto-animate="true" auto-animate-easing="ease-in-out"}
+
+::: columns
+::: {.column width="33%"}
+::: {data-id="box1" style="background: #66c2a5; width: 350px; height: 150px;"}
+::: {.div .content}
+Computational Social Science
+:::
+:::
+:::
+
+::: {.absolute data-id="box2" style="background: #fc8d62; width: 350px; height: 150px;" top="200" left="0" auto-animate-delay="0.1"}
+::: {.div .content}
+Open Science
+:::
+:::
+
+::: {.column width="33%"}
+::: {data-id="box3" style="background: #8da0cb; width: 350px; height: 150px;"}
+::: {.div .content}
+Human-Computer Interactions
+:::
+:::
+:::
+:::
+
+
+##  {auto-animate="true" auto-animate-easing="ease-in-out"}
+
 ::: columns
 ::: {.column width="33%"}
 ::: {data-id="box1" style="background: #66c2a5; width: 350px; height: 150px;"}
@@ -350,7 +404,7 @@ Computational Social Science
 :::
 :::
 
-- Design space where I can immerse myself and engage in discussions with domain experts.
+- Design space where I can immerse myself and engage in collaboration with domain experts.
 
 :::
 
@@ -383,7 +437,7 @@ Computational Social Science
 :::
 :::
 
-- Design space where I can immerse myself and engage in discussions with domain experts.
+- Design space where I can immerse myself and engage in collaboration with domain experts.
 
 :::
 
@@ -417,7 +471,7 @@ Computational Social Science
 :::
 :::
 
-- Design space where I can immerse myself and engage in discussions with domain experts.
+- Design space where I can immerse myself and engage in collaboration with domain experts.
 
 :::
 
