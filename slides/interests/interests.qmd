@@ -8,6 +8,8 @@ format:
     auto-animate-easing: ease-in-out
     auto-animate-unmatched: true
     auto-animate-duration: 0.8
+    background-color: "#ededed"
+    fon
 ---
 
 ```{=html}
