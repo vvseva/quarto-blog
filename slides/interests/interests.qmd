@@ -9,17 +9,9 @@ format:
     auto-animate-unmatched: true
     auto-animate-duration: 0.8
     background-color: "#ededed"
-    fon
 ---
 
 ```{=html}
-<script type="module">
-  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@9.3.0/dist/mermaid.esm.min.mjs';
-  import mindmap from 'https://cdn.jsdelivr.net/npm/@mermaid-js/mermaid-mindmap@9.3.0/dist/mermaid-mindmap.esm.min.mjs';
-  await mermaid.registerExternalDiagrams([mindmap]);
-</script>
-
-
 <style>
 .content {
   position: absolute;
@@ -29,108 +21,7 @@ format:
   transform: translate(-50%, -50%);
 }
 </style>
-
 ```
-
-
-
-
-<!-- ```{R} -->
-<!-- #| echo: false -->
-<!-- library(ggraph) -->
-<!-- library(igraph) -->
-<!-- library(tidyverse) -->
-
-<!-- edges1 = tibble( -->
-<!--   from = c(1, 1, 1, 2, 2, 2, 3, 3, 4, 4, 10), -->
-<!--   to = c(2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12), -->
-<!-- ) -->
-<!-- nodes1 = tibble( -->
-<!--   name = 1:12, -->
-<!--   label = c('Research Interests',  -->
-<!--            'Computational Social Science', 'Open Science', 'Human Computer Interaction',  -->
-<!--            'Digital Experiments', 'Agent Based Modeling', 'Social Network Analysis',  -->
-<!--            'Reproducibility Packages for Studies', 'Science of Science',  -->
-<!--            'Computer Supported Collaborative Work', 'Human AI Teams',  -->
-<!--            'UX of Digital Experiments') -->
-<!-- ) -->
-<!-- edges1 |>  -->
-<!--   graph_from_data_frame(directed = TRUE, vertices = nodes1) |>  -->
-<!--   ggraph(layout = 'dendrogram') + -->
-<!--   geom_edge_link() + -->
-<!--   geom_node_point() + -->
-<!--   geom_node_text(aes(label = label), repel = TRUE) + -->
-<!--   theme_void() -->
-<!-- ``` -->
-
-<!-- ## General Reserach Interests -->
-
-<!-- ```{mermaid} -->
-<!-- mindmap -->
-<!--   root((Research </br> Interests)) -->
-<!--     Computational Social Science -->
-<!--       Digital Experiments -->
-<!--       Agent Based Modeling -->
-<!--       Social Network Analysis -->
-<!--     Open Science -->
-<!--       Reproducibility Packages for Studies -->
-<!--       Science of Science -->
-<!--     Human Computer Interaction -->
-<!--       Computer Supported Collaborative Work -->
-<!--         Human AI Teams -->
-<!--       UX of Digital Experiments -->
-<!-- ``` -->
-
-<!-- ## PhD position 1 {auto-animate="true" auto-animate-easing="ease-in-out"} -->
-
-<!-- ```{mermaid} -->
-<!-- mindmap -->
-<!--   root((Research </br> Interests)) -->
-<!--     Computational Social Science -->
-<!--       Problem Space with domain experts -->
-<!--     Open Science -->
-<!--       Reproducibility Packages for Studies -->
-<!--       Science of Science -->
-<!--     Human Computer Interaction -->
-<!--       Computer Supported Collaborative Work -->
-<!--         Human AI Teams -->
-<!--       UX of Digital Experiments -->
-<!-- ``` -->
-
-<!-- ## PhD position 2 {auto-animate="true" auto-animate-easing="ease-in-out"} -->
-
-<!-- ```{mermaid} -->
-<!-- mindmap -->
-<!--   root((Research </br> Interests)) -->
-<!--     Computational Social Science -->
-<!--       Problem Space with domain experts -->
-<!--     Open Science -->
-<!--       Reproducibility Packages for Studies -->
-<!--       Science of Science -->
-<!--       Communication of Results -->
-<!--     Human Computer Interaction -->
-<!--       Computer Supported Collaborative Work -->
-<!--         Human AI Teams -->
-<!--       UX of Digital Experiments -->
-<!-- ``` -->
-
-<!-- ## PhD position 3 {auto-animate="true" auto-animate-easing="ease-in-out"} -->
-
-<!-- ```{mermaid} -->
-<!-- mindmap -->
-<!--   root((Research </br> Interests)) -->
-<!--     Computational Social Science -->
-<!--       Problem Space with domain experts -->
-<!--     Open Science -->
-<!--       Reproducibility Packages for Studies -->
-<!--       Science of Science -->
-<!--       Communication of Results -->
-<!--     Human Computer Interaction -->
-<!--       Computer Supported Collaborative Work -->
-<!--         How to scaffold Collaboration Of Social Scientists -->
-<!--       Design Study Research -->
-<!-- ``` -->
-
 ##  {auto-animate="true" auto-animate-easing="ease-in-out"}
 
 ::: {.absolute data-id="box1" style="background: #66c2a5; width: 350px; height: 150px;" top="200" left="0"}
@@ -156,7 +47,6 @@ Computational Social Science
 Human-Computer Interactions
 :::
 :::
-
 
 ##  {auto-animate="true" auto-animate-easing="ease-in-out"}
 
@@ -187,7 +77,6 @@ Human-Computer Interactions
 :::
 :::
 
-
 ##  {auto-animate="true" auto-animate-easing="ease-in-out"}
 
 ::: columns
@@ -270,9 +159,8 @@ Open Science
 :::
 :::
 
-- Reproducibility Packages for Studies
-- Science of Science
-
+-   Reproducibility Packages for Studies
+-   Science of Science
 :::
 
 ::: {.column width="33%"}
@@ -306,8 +194,8 @@ Open Science
 :::
 :::
 
-- Reproducibility Packages for Studies
-- Science of Science
+-   Reproducibility Packages for Studies
+-   Science of Science
 :::
 
 ::: {.column width="33%"}
@@ -317,10 +205,9 @@ Human-Computer Interactions
 :::
 :::
 
-- Computer Supported Collaborative Work
-  - Human AI Teams
-- UX of Digital Experiments
-
+-   Computer Supported Collaborative Work
+    -   Human AI Teams
+-   UX of Digital Experiments
 :::
 :::
 
@@ -333,7 +220,7 @@ Computational Social Science
 :::
 
 ::: {.absolute data-id="box2" style="background: #fc8d62; width: 450px; height: 450px; border-radius: 400px; opacity: 0.5; text-align: center;" data-background-opacity="0.5" top="150" left="400"}
-::: {.div .content  style="opacity: 1;"}
+::: {.div .content style="opacity: 1;"}
 Open Science
 :::
 :::
@@ -346,7 +233,6 @@ Human-Computer Interactions
 
 ##  {auto-animate="true" auto-animate-easing="ease-in-out"}
 
-
 ::: {.absolute data-id="box1" top="275" left="50" style="background: #66c2a5; width: 450px; height: 450px; border-radius: 400px; opacity: 0.5; text-align: center;"}
 ::: {.div .content style="opacity: 1;"}
 Computational Social Science
@@ -354,7 +240,7 @@ Computational Social Science
 :::
 
 ::: {.absolute data-id="box2" style="background: #fc8d62; width: 450px; height: 450px; border-radius: 400px; opacity: 0.5; text-align: center;" data-background-opacity="0.5" top="150" left="400"}
-::: {.div .content  style="opacity: 1;"}
+::: {.div .content style="opacity: 1;"}
 Open Science
 :::
 :::
@@ -409,8 +295,7 @@ Computational Social Science
 :::
 :::
 
-- Design space where I can immerse myself and engage in collaboration with domain experts.
-
+-   Design space where I can immerse myself and engage in collaboration with domain experts.
 :::
 
 ::: {.column width="33%"}
@@ -419,42 +304,6 @@ Computational Social Science
 Open Science
 :::
 :::
-:::
-
-::: {.column width="33%"}
-::: {data-id="box3" style="background: #8da0cb; width: 350px; height: 150px;"}
-::: {.div .content}
-Human-Computer Interactions
-:::
-:::
-:::
-:::
-
-
-
-##  {auto-animate="true" auto-animate-easing="ease-in-out"}
-
-::: columns
-::: {.column width="33%"}
-::: {data-id="box1" style="background: #66c2a5; width: 350px; height: 150px; align = center;"}
-::: {.div .content}
-Computational Social Science
-:::
-:::
-
-- Design space where I can immerse myself and engage in collaboration with domain experts.
-
-:::
-
-::: {.column width="33%"}
-::: {data-id="box2" style="background: #fc8d62; width: 350px; height: 150px;"}
-::: {.div .content}
-Open Science
-:::
-:::
-
-- Contribution to the Communication of Results, a.k.a. viz artifacts, tools, frameworks
-
 :::
 
 ::: {.column width="33%"}
@@ -476,8 +325,7 @@ Computational Social Science
 :::
 :::
 
-- Design space where I can immerse myself and engage in collaboration with domain experts.
-
+-   Design space where I can immerse myself and engage in collaboration with domain experts.
 :::
 
 ::: {.column width="33%"}
@@ -487,8 +335,39 @@ Open Science
 :::
 :::
 
-- Contribution to the Communication of Results, a.k.a. viz artifacts, tools, frameworks
+-   Contribution to the Communication of Results, a.k.a. viz artifacts, tools, frameworks
+:::
 
+::: {.column width="33%"}
+::: {data-id="box3" style="background: #8da0cb; width: 350px; height: 150px;"}
+::: {.div .content}
+Human-Computer Interactions
+:::
+:::
+:::
+:::
+
+##  {auto-animate="true" auto-animate-easing="ease-in-out"}
+
+::: columns
+::: {.column width="33%"}
+::: {data-id="box1" style="background: #66c2a5; width: 350px; height: 150px; align = center;"}
+::: {.div .content}
+Computational Social Science
+:::
+:::
+
+-   Design space where I can immerse myself and engage in collaboration with domain experts.
+:::
+
+::: {.column width="33%"}
+::: {data-id="box2" style="background: #fc8d62; width: 350px; height: 150px;"}
+::: {.div .content}
+Open Science
+:::
+:::
+
+-   Contribution to the Communication of Results, a.k.a. viz artifacts, tools, frameworks
 :::
 
 ::: {.column width="33%"}
@@ -498,11 +377,9 @@ Human-Computer Interactions
 :::
 :::
 
-- Design Study Research
-
+-   Design Study Research
 :::
 :::
-
 
 ##  {auto-animate="true" auto-animate-easing="ease-in-out" background-color="#00ff00"}
 
