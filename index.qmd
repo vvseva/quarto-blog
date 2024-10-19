@@ -20,8 +20,8 @@ about:
 
 ### 
 
-::: {div}
-Please call me Seva <input type="checkbox" id="cb1" /><label for="cb1"><sup></sup></label><br><br>(SEH-vah: "SEH" as in "set", and "vah" rhymes with "spa");.<br><br> here is my [CV](cv/cv_page.html).
+::: {#div}
+Please call me Seva, and here is my [CV](cv/cv_page.html).
 :::
 
 ::: {#hero-heading}
