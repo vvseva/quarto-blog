@@ -1,9 +1,9 @@
 ---
 title: Curriculum vitæ
 description: "vsevolod Suschevskiy's CV"
-date: 2024-06-25
+date: today
 published-title: CV last updated
-freeze: true
+freeze: false
 ---
 
 ```{r}
