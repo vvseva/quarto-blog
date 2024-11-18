@@ -10,8 +10,8 @@ website:
       - icon: github
         href: https://github.com/vvseva
         target: _blank
-      - icon: twitter
-        href: https://twitter.com/vvsuschevskiy
+      - icon: blusky
+        href: https://bsky.app/profile/vvseva.bsky.social
         target: _blank
       - icon: linkedin
         href: https://www.linkedin.com/in/vvsuschevskiy
