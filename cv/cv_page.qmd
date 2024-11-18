@@ -3,7 +3,7 @@ title: Curriculum vitæ
 description: "vsevolod Suschevskiy's CV"
 date: today
 published-title: CV last updated
-freeze: false
+freeze: true
 ---
 
 ```{r}
