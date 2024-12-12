@@ -24,7 +24,7 @@ format:
       - litera_custom.scss
       # - sketchy_custom.scss
       # - quartz
-    mainfont: "Lato"
+    mainfont: "Source Serif 4"
     # css: styles.css
 
 editor: visual
