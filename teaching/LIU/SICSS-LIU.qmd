@@ -1,0 +1,11 @@
+---
+title: "Summer 2025 SICSS-IAS"
+author: "Invited Lecturer"
+date: "2025-07-01"
+categories: [Linköping University, SNA]
+# image: "image.jpg"
+---
+
+I was part of the Summer 2025 [SICSS-IAS](https://sicss.io/2025/ias/) program at Linköping University that coexisted with Summer School on Methods for Social Scientists. I helped to transition Digital Traces Lab from twitter to Bluesky, and explained the post API world. For the SNA lab i mostly did maintenance and updated examples to tidygraph.
+
+- [github](https://github.com/IAS-LiU/SICSS-2025)
