@@ -1,6 +1,6 @@
 ---
 title: "Summer 2025 SICSS-IAS"
-author: "Invited Lecturer"
+author: "Teaching Assistant"
 date: "2025-07-01"
 categories: [Linköping University, SNA]
 # image: "image.jpg"
