@@ -16,7 +16,7 @@ Noshir Contractor's undegraduate course on Social Netowkr Analysis. SNA stories 
 You could read reviews from optional Course and Teacher Evaluations below. Open-ended “What are the primary strengths and weaknesses of the teaching assistant?” at the very bottom.
 
 ::: embed-container
-<iframe src="_www/CTEC/CTEC-2025-SP-SNA.pdf" style="border: 0.5px">
+<iframe src="~/_www/CTEC/CTEC-2025-SP-SNA.pdf" style="border: 0.5px">
 
 </iframe>
 :::
