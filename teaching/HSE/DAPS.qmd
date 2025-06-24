@@ -1,10 +1,14 @@
 ---
-title: "small Data Science"
+title: "SP 2020 **small** Data Science"
 author: "Invited Lecturer"
 date: "2020-09-01"
 categories: [HSE University, Data Science]
 # image: "image.jpg"
 ---
+
+I was an Instruction of record for a course that I had to design and teach from scratch. It was based on [Small Data Science MS&E 226](https://web.stanford.edu/class/msande226/) course at Stanford University, but I had to adapt it for a different audience and context. The course was designed for Master students in Political Science, and it was a mix of data science and social science methods. The main goal was to make Political Science students be aware of the possibilities of data science and how to use it in their research.
+
+As a primer we did computational replication of “A large-scale analysis of racial disparities in police stops across the United States” by Pierson et al.
 
 -   20ish student
 

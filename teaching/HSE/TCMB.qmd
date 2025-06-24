@@ -1,5 +1,5 @@
 ---
-title: "Theory Construction and Model Building"
+title: "Winter 2019 Theory Construction and Model Building"
 author: "Invited Lecturer"
 date: "2020-09-01"
 categories: [HSE University, ABM]
@@ -12,8 +12,7 @@ categories: [HSE University, ABM]
 </iframe>
 :::
 
-Obviously based on _Theory Construction and Model-Building Skills: A Practical Guide for Social Scientists_ Book by Jacob Jacoby and James Jaccard, but enhanced with NetLogo as a way to simulate artificial societies and test theories.
-
+Obviously based on *Theory Construction and Model-Building Skills: A Practical Guide for Social Scientists* Book by Jacob Jacoby and James Jaccard, but enhanced with NetLogo as a way to simulate artificial societies and test theories.
 
 -   25 + 25 students in 2019 and 2020 (Remote, because COVID)
 
