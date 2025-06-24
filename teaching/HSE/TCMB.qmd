@@ -12,7 +12,10 @@ categories: [HSE University, ABM]
 </iframe>
 :::
 
--   25 + 25 students
+Obviously based on _Theory Construction and Model-Building Skills: A Practical Guide for Social Scientists_ Book by Jacob Jacoby and James Jaccard, but enhanced with NetLogo as a way to simulate artificial societies and test theories.
+
+
+-   25 + 25 students in 2019 and 2020 (Remote, because COVID)
 
 -   BA: Sociology and Social Informatics
 
