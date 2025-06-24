@@ -4,6 +4,7 @@ author: "Teaching Assistant"
 date: "2025-05-01"
 categories: [Northwestern, SNA]
 # image: "image.jpg"
+freeze: true
 ---
 
 Noshir Contractor's undegraduate course on Social Netowkr Analysis. SNA stories and anecdotes. From simplicity of descriptive analysis and visualizations to simulation models like ERGMs, SOAMs, REMs (relevent, DYNAMs), and ALAAMs. Course was cross listed as IEMS_341, COMM_ST_352, and COMP_SCI_341. See more at [SP 2024: Social Network Analysis](SP2024_SNA.qmd)

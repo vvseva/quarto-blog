@@ -4,6 +4,7 @@ author: "Teaching Assistant"
 date: "2024-05-01"
 categories: [Northwestern, SNA]
 # image: "image.jpg"
+freeze: true
 ---
 
 ## Course Description
