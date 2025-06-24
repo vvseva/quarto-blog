@@ -1,0 +1,15 @@
+{
+  "hash": "e0eb6dda7e31a83a39595f60184583dc",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Social Network Analysis 341\"\nauthor: \"Teaching Assistant\"\ndate: \"2024-05-01\"\ncategories: [Northwestern University, SNA]\n# image: \"image.jpg\"\n---\n\n\n\nNoshir Contractor's undegraduate course on Social Netowkr Analysis. SNA stories and anecdotes. From simplicity of descriptive analysis and visualizations to simulation models like ERGMs, SOAMs, REMs (relevent, DYNAMs), and ALAAMs.\n\nI updated labs to be more aligned with tidyverse principles and told students that there were doing OK and were not in danger, even if computers and data anlysis could be scary sometimes. Got a shiny award for that.\n\n![](TA-award.jpg)\n\nYou could read reviews from optional Course and Teacher Evaluations below.\n\ndisplay a PDF\n\n\n\n![](CTEC-2024-Sp-SNA.pdf)\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

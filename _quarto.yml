@@ -10,7 +10,7 @@ website:
       - icon: github
         href: https://github.com/vvseva
         target: _blank
-      - icon: blusky
+      - icon: twitter
         href: https://bsky.app/profile/vvseva.bsky.social
         target: _blank
       - icon: linkedin

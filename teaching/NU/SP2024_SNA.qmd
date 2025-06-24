@@ -1,0 +1,27 @@
+---
+title: "SP 2024: Social Network Analysis"
+author: "Teaching Assistant"
+date: "2024-05-01"
+categories: [Northwestern, SNA]
+# image: "image.jpg"
+---
+
+## Course Description
+
+Noshir Contractor's undegraduate course on Social Netowkr Analysis. SNA stories and anecdotes. From simplicity of descriptive analysis and visualizations to simulation models like ERGMs, SOAMs, REMs (relevent, DYNAMs), and ALAAMs. Course was cross listed as IEMS_341, COMM_ST_352, and COMP_SCI_341. 
+
+## What I was doing
+
+I updated labs to be more aligned with tidyverse principles and told students that there were doing OK and were not in danger, even if computers and data anlysis could be scary sometimes. Got a shiny award for that.
+
+![](TA-award.jpg)
+
+## Course and Teacher Evaluations
+
+You could read reviews from optional Course and Teacher Evaluations below. Open-ended "What are the primary strengths and weaknesses of the teaching assistant?" at the very bottom.
+
+::: embed-container
+<iframe src="CTEC-2024-SP-SNA.pdf" style="border: 0.5px">
+
+</iframe>
+:::
