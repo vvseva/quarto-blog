@@ -2,6 +2,7 @@ project:
   type: website
   resources: 
     - CTEC-2025-SP-SNA.pdf
+    - CTEC-2024-SP-SNA.pdf
 
 website:
   title: "Vsevolod Suschevskiy"
