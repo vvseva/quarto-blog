@@ -17,3 +17,9 @@ As a primer we did computational replication of “A large-scale analysis of rac
 -   [syllabus](https://docs.google.com/document/d/1NndI5iMiHmthjEwwhlGKr2xaSXmZVx9_DqqGtMjAbiA/edit?usp=sharing)
 
 -   [github](https://github.com/vvseva/DS_DAPS) with class materials
+
+### Course Evaluation
+
+(Students were mostly russian-speaking)
+
+![](DAPS_comments.jpg)
