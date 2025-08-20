@@ -1,13 +1,15 @@
 ---
 title: "Projects"
 listing:
-  - id: posts
+    id: posts
     contents: posts
     sort: "date desc"
     type: grid
     categories: true
     sort-ui: false
     filter-ui: false
+    fields: [title, date, categories, image, description]
+    max-description-length: 100
 page-layout: full
 title-block-banner: false
 ---
