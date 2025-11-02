@@ -25,7 +25,7 @@ Please call me Seva, and here is my [CV](cv/cv_page.html).
 :::
 
 ::: {#hero-heading}
-I study how to improve human-AI teamwork in teams and organizations. I combine the lenses of analytical sociology and human-computer interaction to understand the mechanisms of computer-supported collaborative work. To do that, I build virtual lab experiments where I can look at digital traces and ask ego-centric questions. Finally, I use social network analysis to untangle the social structure in human-AI teams. I am also passionate about the Open Science movement, especially the idea of integrative experiments. Recently, I have worked as a replicator for a massive open collaboration project and participated in a replication game at Northwestern.
+In 2025 I started a PhD at Linköping University, Sweden where I work with Miriah Meyer on interactive visualization tools for computational sociology. We will try to explain segregation model to normal people (non experts)
 
 ## Bio
 
