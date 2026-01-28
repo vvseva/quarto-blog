@@ -59,6 +59,7 @@ $font-family-serif:           "Source Serif 4" serif !default;
 // stylelint-enable
 
 $font-size-base:              1.1rem !default;
+$line-height-base:            1.6 !default;
 $headings-font-weight:        700 !default;
 
 // Tables
@@ -80,8 +81,8 @@ $btn-border-radius-lg:        2.688em !default;
 $btn-border-radius-sm:        .844em !default;
 
 .btn {
-  min-height: 20px;
-  min-width: 59px;
+  min-height: 44px; // Touch-friendly height
+  min-width: 44px; // Touch-friendly width
   padding: 0 20px;
   text-align: center;
   background: $gray-100 !important;
@@ -94,6 +95,11 @@ $btn-border-radius-sm:        .844em !default;
   font-size: 18px !important;
   border-radius: 0 !important;
   cursor: pointer  !important;
+  
+  @media (max-width: 768px) {
+    padding: 0.5rem 1rem;
+    font-size: 16px !important; // Prevent iOS zoom
+  }
 }
 
 // Forms
@@ -124,16 +130,26 @@ $alert-border-width:                0 !default;
 
 // Variables
 
+// Responsive typography with CSS clamp
+body {
+  font-size: clamp(1rem, 2vw, 1.1rem);
+}
+
 // Navbar
 
 .navbar {
   font-size: $font-size-sm;
   flex-direction: column;
-  margin: 1rem;
+  margin: clamp(0.5rem, 2vw, 1rem);
   min-width: 320px;
   overflow: hidden;
   background-color: $gray-100;
   border: 0.1em solid $secondary;
+  
+  @media (max-width: 768px) {
+    margin: 0.25rem;
+    font-size: 0.9rem;
+  }
 }
 
 #title-block-header {
@@ -144,12 +160,24 @@ $alert-border-width:                0 !default;
 .page-columns {
   margin-right: 1rem;
   margin-left: 1rem;
+  
+  @media (max-width: 768px) {
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+  }
 }
 
 .column-body{
 //  width: 105% !important;
   fill: $gray-100 !important;
   padding: 0 !important;
+  max-width: 65ch; // Optimal reading width
+  margin: 0 auto;
+  
+  @media (max-width: 768px) {
+    max-width: 100%;
+    padding: 0 0.5rem !important;
+  }
 }
 
 .quarto-title-block {
@@ -234,11 +262,21 @@ $alert-border-width:                0 !default;
   border-style: solid;
   border-width: 5.5px;
   border-image: url("./icon/button.svg") 30 stretch;
-    color: $gray-100;
+  color: $gray-100;
   border-color: $gray-100;
   object-fit: cover;
   height: 25rem;
   object-position: right bottom;
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    max-height: 300px; // Prevent huge images on mobile
+    
+    @media (max-width: 768px) {
+      max-height: 250px;
+    }
+  }
 }
 
 .figure-img{
@@ -443,4 +481,53 @@ input[type=checkbox] ~ label:hover {
 input[type=checkbox]:checked ~ label {
     color:red;
     text-decoration:none;
+}
+
+// Code blocks - mobile optimization
+div.sourceCode {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; // Smooth scrolling on iOS
+  font-size: 0.85rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  
+  @media (max-width: 768px) {
+    font-size: 0.75rem;
+  }
+}
+
+pre.sourceCode {
+  @media (max-width: 768px) {
+    padding: 0.5rem;
+  }
+}
+
+// Retro web aesthetic - subtle borders on sections
+article, section {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: rgba(255, 255, 255, 0.6);
+  
+  @media (max-width: 768px) {
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+// Responsive tables for mobile
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+table {
+  @media (max-width: 768px) {
+    font-size: 0.8rem;
+  }
+}
+
+// visNetwork and htmlwidgets responsive handling
+.html-widget {
+  max-width: 100%;
+  overflow-x: auto;
 }

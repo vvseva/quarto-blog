@@ -5,10 +5,11 @@ listing:
     contents: teaching
     fields: [title, categories, date]
     sort: "date desc"
-    type: table
+    type: grid
     categories: true
     sort-ui: false
     filter-ui: false
+    grid-columns: 2
 page-layout: full
 title-block-banner: false
 ---
