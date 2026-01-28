@@ -132,7 +132,11 @@ $alert-border-width:                0 !default;
 
 // Responsive typography with CSS clamp
 body {
-  font-size: clamp(1.2rem, 3.5vw, 1.1rem);
+  font-size: 1.1rem;
+  
+  @media (max-width: 768px) {
+    font-size: 1.35rem; // Much larger for mobile
+  }
 }
 
 // Navbar
@@ -149,8 +153,15 @@ body {
   
   @media (max-width: 768px) {
     margin: 0.1rem;
-    padding: 0.25rem 0;
-    font-size: 1rem;
+    padding: 0.4rem 0;
+    font-size: 1.2rem;
+  }
+  
+  a {
+    @media (max-width: 768px) {
+      font-size: 1.2rem;
+      padding: 0.5rem 1rem;
+    }
   }
 }
 
@@ -226,6 +237,11 @@ body {
   background: $gray-100;
   cursor: default;
   font-family: Chicago_12;
+  
+  @media (max-width: 768px) {
+    font-size: 1.8rem;
+    padding: 0.3em 0.5em;
+  }
 }
 
 .subtitle{
@@ -327,6 +343,19 @@ body {
 
 p {
   font-family: $font-family-serif;
+  
+  @media (max-width: 768px) {
+    font-size: 1.35rem;
+    line-height: 1.7;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @media (max-width: 768px) {
+    font-size: 1.6rem !important;
+    margin-top: 1rem;
+    margin-bottom: 0.8rem;
+  }
 }
 
 // Text justification for better reading
