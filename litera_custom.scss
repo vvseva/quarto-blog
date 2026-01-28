@@ -132,7 +132,7 @@ $alert-border-width:                0 !default;
 
 // Responsive typography with CSS clamp
 body {
-  font-size: clamp(1.05rem, 2.5vw, 1.1rem);
+  font-size: clamp(1.2rem, 3.5vw, 1.1rem);
 }
 
 // Navbar
@@ -140,15 +140,17 @@ body {
 .navbar {
   font-size: $font-size-sm;
   flex-direction: column;
-  margin: clamp(0.5rem, 2vw, 1rem);
+  margin: clamp(0.25rem, 1.5vw, 1rem);
   min-width: 320px;
   overflow: hidden;
   background-color: $gray-100;
   border: 0.1em solid $secondary;
+  padding: 0.5rem 0;
   
   @media (max-width: 768px) {
-    margin: 0.25rem;
-    font-size: 0.9rem;
+    margin: 0.1rem;
+    padding: 0.25rem 0;
+    font-size: 1rem;
   }
 }
 
@@ -162,8 +164,8 @@ body {
   margin-left: 1rem;
   
   @media (max-width: 768px) {
-    margin-right: 0.5rem;
-    margin-left: 0.5rem;
+    margin-right: 0.25rem;
+    margin-left: 0.25rem;
   }
 }
 
@@ -176,7 +178,7 @@ body {
   
   @media (max-width: 768px) {
     max-width: 100%;
-    padding: 0 0.5rem !important;
+    padding: 0 0.25rem !important;
   }
 }
 
