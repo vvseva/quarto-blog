@@ -3,6 +3,7 @@ title: "CERES"
 author: "Vsevolod Suschevskiy"
 date: "2020-04-20"
 categories: [experiment]
+image: "ceres.jpg"
 ---
 
 I was working as a RA at University of Bergen and created a course recommendation systems, using R Shiny that was integrated with Elasticsearch and doc2vec embedding model. [Poster](https://www.researchgate.net/profile/Vsevolod-Suschevskiy-2/publication/350874550_Creating_a_Course_Recommendation_System_for_Exchange_Students/links/607fdaa98ea909241e12687c/Creating-a-Course-Recommendation-System-for-Exchange-Students.pdf).

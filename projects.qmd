@@ -4,12 +4,12 @@ listing:
     id: posts
     contents: posts
     sort: "date desc"
-    type: grid
+    template: _extensions/custom-listing/gallery.ejs
     categories: true
     sort-ui: false
     filter-ui: false
-    fields: [title, date, categories, image, description]
-    max-description-length: 100
+    fields: [title, date, categories, image, description, author, subtitle]
+    max-description-length: 300
 page-layout: full
 title-block-banner: false
 ---

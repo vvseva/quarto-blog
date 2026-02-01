@@ -3,6 +3,7 @@ title: "OCMC24"
 author: "Vsevolod Suschevskiy"
 date: "2024-08-31"
 categories: [news, conference]
+image: "hosts.png"
 ---
 
 I helped with organization of the [Organizational Communication Mini-Conference at Northwestern University](https://sites.northwestern.edu/ocmc24/) from September 27th to 29th, 2024

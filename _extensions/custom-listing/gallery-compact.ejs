@@ -1,0 +1,213 @@
+```{=html}
+<style>
+/* Apple System 1 inspired styling - compact version */
+
+.gallery-card-compact {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #ffffff;
+  border: 3px solid #000000;
+  border-radius: 0;
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.3);
+  font-family: "Chicago", "Monaco", monospace;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.gallery-card-compact:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-card-compact .card-img-top {
+  object-fit: contain;
+  object-position: center;
+  width: 100%;
+  max-height: 250px;
+  background-color: #ffffff;
+  border-bottom: 2px solid #000000;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.gallery-card-compact .card-header {
+  background: linear-gradient(90deg, #000000 50%, transparent 50%), linear-gradient(90deg, #000000 50%, transparent 50%);
+  background-size: 2px 2px, 2px 2px;
+  background-position: 0 0, 1px 1px;
+  color: #ffffff;
+  padding: 4px 6px !important;
+  border: 0;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 13px;
+  min-height: 24px;
+}
+
+.gallery-card-compact .card-header a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.gallery-card-compact .card-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 6px;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.gallery-card-compact .card-text {
+  flex-grow: 1;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  font-size: 12px;
+}
+
+.gallery-card-compact .listing-description {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  overflow: hidden;
+  margin-bottom: 4px;
+}
+
+.gallery-card-compact .listing-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
+  margin-top: auto;
+}
+
+.gallery-card-compact .listing-category {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  font-size: 11px !important;
+  padding: 1px 3px !important;
+  border: 1px solid #000000;
+  border-radius: 0 !important;
+  font-weight: bold;
+}
+
+.gallery-card-compact .card-footer {
+  border-top: 2px solid #000000;
+  padding: 3px 6px !important;
+  font-size: 12px;
+  background-color: #f0f0f0;
+}
+
+/* Compact title-only cards */
+.gallery-card-compact.compact-title-only {
+  min-height: auto;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.gallery-card-compact.compact-title-only .card-header {
+  border-bottom: 0;
+  position: relative;
+  z-index: 2;
+  background: linear-gradient(90deg, #000000 50%, transparent 50%), linear-gradient(90deg, #000000 50%, transparent 50%);
+  background-size: 2px 2px, 2px 2px;
+  background-position: 0 0, 1px 1px;
+}
+
+.gallery-card-compact.compact-title-only .card-img-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  max-height: none;
+  opacity: 0;
+  z-index: 1;
+  transition: opacity 0.2s ease;
+  border: none;
+}
+
+.gallery-card-compact.compact-title-only:hover .card-img-top {
+  opacity: 0.85;
+}
+
+.gallery-card-compact.compact-title-only:hover .card-header {
+  background: rgba(0, 0, 0, 0.9);
+}
+</style>
+
+<div class="list grid" style="grid-template-columns: 1fr 1fr 1fr; grid-template-rows: auto auto; column-gap: 1rem; row-gap: 1rem;">
+
+<% 
+// First item - full card spanning 3 columns
+const firstItem = items[0];
+let imageUrl = firstItem.image;
+if (!imageUrl && firstItem.description) {
+  const imgMatch = firstItem.description.match(/!\[.*?\]\((.*?)\)/);
+  if (imgMatch) {
+    imageUrl = imgMatch[1];
+  }
+}
+%>
+
+<div class="card gallery-card-compact" style="grid-column: span 3; grid-row: 1;" <%= metadataAttrs(firstItem) %>>
+  <% if (imageUrl) { %>
+  <a href="<%- firstItem.path %>">
+    <img src="<%- imageUrl %>" alt="<%- firstItem.title %>" class="card-img-top"/>
+  </a>
+  <% } %>
+  
+  <div class="card-header">
+    <a href="<%- firstItem.path %>" class="listing-title"><%= firstItem.title %></a>
+  </div>
+  
+  <div class="card-body">
+    <% if (firstItem.description) { %>
+    <p class="card-text listing-description"><%= firstItem.description %></p>
+    <% } %>
+    
+    <% if (firstItem.categories && firstItem.categories.length > 0) { %>
+    <div class="listing-categories">
+      <% for (const category of firstItem.categories) { %>
+      <span class="listing-category badge bg-secondary"><%= category %></span>
+      <% } %>
+    </div>
+    <% } %>
+  </div>
+  
+  <div class="card-footer text-muted">
+    <% if (firstItem.author) { %>
+    <span class="listing-author"><%= firstItem.author %></span>
+    <% } %>
+    <% if (firstItem.date) { %>
+    <span class="listing-date"><%= firstItem.date %></span>
+    <% } %>
+  </div>
+</div>
+
+<% 
+// Remaining items - title only with hover preview, each in row 2
+for (let i = 1; i < items.length && i < 4; i++) { 
+  const item = items[i];
+  const col = i; // columns 1, 2, 3
+  let itemImageUrl = item.image;
+  if (!itemImageUrl && item.description) {
+    const imgMatch = item.description.match(/!\[.*?\]\((.*?)\)/);
+    if (imgMatch) {
+      itemImageUrl = imgMatch[1];
+    }
+  }
+%>
+<div class="card gallery-card-compact compact-title-only" style="grid-column: <%= col %>; grid-row: 2;" <%= metadataAttrs(item) %>>
+  <% if (itemImageUrl) { %>
+  <img src="<%- itemImageUrl %>" alt="<%- item.title %>" class="card-img-top"/>
+  <% } %>
+  <div class="card-header">
+    <a href="<%- item.path %>" class="listing-title"><%= item.title %></a>
+  </div>
+</div>
+<% } %>
+
+</div>
+```

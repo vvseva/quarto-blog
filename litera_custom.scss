@@ -132,7 +132,7 @@ $alert-border-width:                0 !default;
 
 // Responsive typography with CSS clamp
 body {
-  font-size: clamp(1.2rem, 3.5vw, 1.1rem);
+  font-size: clamp(1.05rem, 2.5vw, 1.1rem);
 }
 
 // Navbar
@@ -140,17 +140,15 @@ body {
 .navbar {
   font-size: $font-size-sm;
   flex-direction: column;
-  margin: clamp(0.25rem, 1.5vw, 1rem);
+  margin: clamp(0.5rem, 2vw, 1rem);
   min-width: 320px;
   overflow: hidden;
   background-color: $gray-100;
   border: 0.1em solid $secondary;
-  padding: 0.5rem 0;
   
   @media (max-width: 768px) {
-    margin: 0.1rem;
-    padding: 0.25rem 0;
-    font-size: 1rem;
+    margin: 0.25rem;
+    font-size: 0.9rem;
   }
 }
 
@@ -164,8 +162,8 @@ body {
   margin-left: 1rem;
   
   @media (max-width: 768px) {
-    margin-right: 0.25rem;
-    margin-left: 0.25rem;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
   }
 }
 
@@ -178,7 +176,7 @@ body {
   
   @media (max-width: 768px) {
     max-width: 100%;
-    padding: 0 0.25rem !important;
+    padding: 0 0.5rem !important;
   }
 }
 
@@ -352,11 +350,58 @@ footer {
   color: $secondary;
 }
 
-// Tables
+// Tables - booktabs style with practical typography
 
 table,
 .table {
   font-size: $font-size-sm;
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+// Booktabs-inspired: minimal, professional lines
+thead {
+  border-top: 2px solid $secondary;
+  border-bottom: 1px solid $secondary;
+}
+
+thead th {
+  font-weight: 600;
+  padding: 0.75rem 0.5rem;
+  text-align: left;
+  vertical-align: bottom;
+  border: none;
+  background-color: transparent;
+}
+
+tbody {
+  border-bottom: 2px solid $secondary;
+}
+
+tbody td {
+  padding: 0.6rem 0.5rem;
+  border: none;
+  vertical-align: middle;
+}
+
+// Subtle row separators for readability
+tbody tr {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+tbody tr:last-child {
+  border-bottom: none;
+}
+
+// No zebra striping - cleaner look
+tbody tr:nth-child(odd) {
+  background-color: transparent;
+}
+
+// Light hover effect for interactivity
+tbody tr:hover {
+  background-color: rgba(0, 0, 0, 0.02);
 }
 
 // Navs
@@ -526,6 +571,107 @@ article, section {
   }
 }
 
+// Retro web aesthetic - subtle borders on sections
+article, section {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: rgba(255, 255, 255, 0.6);
+  
+  @media (max-width: 768px) {
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+// Post body text styling
+p {
+  font-family: $font-family-serif;
+}
+
+// Images in posts with System 1 window style
+img {
+  border: 3px solid $black;
+  border-radius: 0 !important;
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.3);
+  margin: 8px 0;
+  max-width: 100%;
+  height: auto;
+}
+
+figure {
+  border: 3px solid $black;
+  border-radius: 0 !important;
+  padding: 8px;
+  margin: 1rem 0;
+  background-color: #ffffff;
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.3);
+}
+
+figcaption {
+  font-family: "Chicago", "Monaco", monospace;
+  font-size: 10px;
+  padding: 4px;
+  border-top: 2px solid $black;
+  margin-top: 4px;
+}
+
+// Code blocks with System 1 style
+pre, code {
+  font-family: "Monaco", monospace;
+  background-color: #ffffff;
+  border: 2px solid $black;
+  border-radius: 0 !important;
+}
+
+pre {
+  padding: 8px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  box-shadow: inset 1px 1px 0px rgba(0, 0, 0, 0.2);
+}
+
+code {
+  padding: 2px 4px;
+  color: #000000;
+}
+
+pre code {
+  padding: 0;
+  border: none;
+  box-shadow: none;
+}
+
+// Blockquotes with System 1 style
+blockquote {
+  border-left: 3px solid $black;
+  border-top: 2px solid $black;
+  border-right: 2px solid $black;
+  border-bottom: 2px solid $black;
+  border-radius: 0 !important;
+  padding: 8px;
+  margin: 1rem 0;
+  background-color: #ffffff;
+  font-style: italic;
+  font-family: $font-family-serif;
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
+}
+
+blockquote p {
+  margin: 0;
+}
+
+// Lists styling
+ul, ol {
+  font-family: $font-family-serif;
+  padding-left: 20px;
+}
+
+li {
+  margin: 4px 0;
+  line-height: 1.4;
+}
+
 // Responsive tables for mobile
 .table-responsive {
   overflow-x: auto;
@@ -542,4 +688,13 @@ table {
 .html-widget {
   max-width: 100%;
   overflow-x: auto;
+  border: 2px solid $black;
+  border-radius: 0 !important;
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
+}
+// Remove borders, background, and padding from article and section
+article, section {
+  border: none !important;
+  background-color: transparent !important;
+  padding: 0 !important;
 }

@@ -3,6 +3,7 @@ title: "init"
 author: "Vsevolod Suschevskiy"
 date: "2024-05-15"
 categories: [news]
+image: "trolley.png"
 ---
 
 This is the first post in a Quarto blog. Welcome!

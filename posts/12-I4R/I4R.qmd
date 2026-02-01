@@ -3,6 +3,7 @@ title: "Replication Game"
 author: "Vsevolod Suschevskiy"
 date: "2024-10-20"
 categories: [news, publication, replication]
+image: "good.png"
 ---
 
 Together with Efrén, John Lee, and Emilio at Northwestern [replication game](https://i4replication.org/games.html), we looked at the "**Se Habla Español: Spanish-Language Appeals and Candidate Evaluatioited States**" paper and replication package. Suffered for a bit and put together a computational replication. Results held the same. See the [replication report](https://osf.io/xfp4k).
