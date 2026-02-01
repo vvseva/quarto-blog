@@ -21,7 +21,7 @@ listing:
     contents: posts
     sort: "date desc"
     max-items: 4
-    template: _extensions/custom-listing/gallery-xpact.ejs
+    template: _extensions/custom-listing/gallery-compact.ejs
     fields: [image, title, date, description, categories, author]
 ---
 
