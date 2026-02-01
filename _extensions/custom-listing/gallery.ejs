@@ -136,6 +136,21 @@
 .gallery-card .card-footer .listing-date {
   margin-right: 6px;
 }
+
+/* Mobile responsive: 1 column layout */
+@media (max-width: 768px) {
+  .list.grid {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .gallery-card[style*="grid-column: span 2"] {
+    grid-column: 1 !important;
+  }
+  
+  .gallery-card[style*="grid-row: span 2"] {
+    grid-row: auto !important;
+  }
+}
 </style>
 
 <div class="list grid" style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); column-gap: 1.5rem; row-gap: 1.5rem; grid-auto-flow: dense;">
