@@ -1,0 +1,11 @@
+---
+title: "Starting a PhD at Linköping University"
+author: "Vsevolod Suschevskiy"
+date: "2025-06-01"
+categories: [news]
+image: "liu.jpg"
+---
+
+In June 2025 I started a PhD at Linköping University, Sweden. I’m working with Miriah Meyer on interactive visualization tools for computational sociology.
+
+More to come as the work unfolds.

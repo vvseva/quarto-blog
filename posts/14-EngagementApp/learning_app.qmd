@@ -1,0 +1,19 @@
+---
+title: "Student engagement profiles in a mobile app"
+author: "Vsevolod Suschevskiy"
+date: "2026-01-22"
+categories: [publication, learning analytics, visualization]
+image: "LPA_GGPLOT4_fixed3_bee_annotated_white.png"
+---
+
+**Bottom line:** practice is king.
+
+We found that students used the study app in very different ways: some consistently throughout the class, others only to cram before the exam, and some barely or not at all. Those who used the app for self-regulated learning outperformed those who didn’t.
+
+That was the longest road I have taken so far. Five years have passed since I first saw the data, and even longer since it was collected. Conceptually, I have moved from a classical "squeeze the maximum out of the data" mindset to a more transparent post-positivism. The data was still tortured.
+
+**Read the paper:** - [Student engagement profiles in a mobile app: Links to self‑regulated learning and performance (ETRD, 2026)](https://link.springer.com/article/10.1007/s11423-026-10586-2)
+
+![](LPA_GGPLOT4_fixed3_bee_annotated_white.png){fig-alt="A composite statistical visualization comparing three student profiles—Disengaged (green), Utilitarian (orange), and Active (blue)—across ten engagement indicators. The chart utilizes box plots overlaid with jittered raw data points to show the distribution of 193 observations. The Y-axis represents a normalized scale (POMS) from 0.00 to 1.00. The X-axis displays ten variables: Attempts, Successful attempts, Unique days, Consecutive days, Use of compete/battle modes, Early start, Late finish, Maximum time, Mean time, and Minimum time."}
+
+I created my most complicated visualization to show 193 observations across ten continuous and categorical axes. It is messy, but I like my arrows and Epanechnikov’s kernel.

@@ -13,3 +13,144 @@ listing:
 page-layout: full
 title-block-banner: false
 ---
+
+```{=html}
+<style>
+.timeline-container {
+  position: fixed;
+  left: 10px;
+  top: 100px;
+  bottom: 80px;
+  z-index: 100;
+  width: 50px;
+  font-family: "Chicago", "Monaco", monospace;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.timeline-container::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #000000;
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  text-align: center;
+  padding: 6px;
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 10px;
+  line-height: 1.2;
+  color: #000000;
+  border: 1px solid #000000;
+  flex-shrink: 0;
+  margin: 8px auto;
+  min-width: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.timeline-item.active {
+  background-color: #000000;
+  color: #ffffff;
+  border: 2px solid #000000;
+  box-shadow: 0 0 0 3px #ffffff, 0 0 0 4px #000000;
+}
+
+.timeline-year {
+  font-weight: bold;
+  display: block;
+}
+
+.timeline-month {
+  font-size: 9px;
+  display: block;
+}
+
+@media (max-width: 1200px) {
+  .timeline-container {
+    display: none;
+  }
+}
+</style>
+```
+
+::: {#timeline .timeline-container}
+:::
+
+```{=html}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const timeline = document.querySelector('.timeline-container');
+  if (!timeline) return;
+  
+  // Get all gallery cards
+  const cards = document.querySelectorAll('.gallery-card[data-date]');
+  if (!cards.length) return;
+  
+  // Extract unique dates
+  const dateMap = new Map();
+  cards.forEach(card => {
+    const dateStr = card.getAttribute('data-date');
+    if (dateStr && !dateMap.has(dateStr)) {
+      const date = new Date(dateStr);
+      dateMap.set(dateStr, {
+        date,
+        year: date.getFullYear(),
+        month: date.toLocaleString('en', { month: 'short' })
+      });
+    }
+  });
+  
+  // Sort dates descending
+  const sortedEntries = Array.from(dateMap.entries())
+    .sort((a, b) => b[1].date - a[1].date);
+  
+  // Create timeline items
+  sortedEntries.forEach(([dateStr, dateInfo]) => {
+    const timelineItem = document.createElement('div');
+    timelineItem.className = 'timeline-item';
+    timelineItem.setAttribute('data-date', dateStr);
+    timelineItem.innerHTML = `<span class="timeline-year">${dateInfo.year}</span><span class="timeline-month">${dateInfo.month}</span>`;
+    
+    timelineItem.addEventListener('click', function() {
+      const card = document.querySelector(`.gallery-card[data-date="${dateStr}"]`);
+      if (card) {
+        card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    });
+    
+    timeline.appendChild(timelineItem);
+  });
+  
+  // Update active item on scroll
+  function updateActive() {
+    const items = timeline.querySelectorAll('.timeline-item');
+    items.forEach(item => item.classList.remove('active'));
+    
+    for (let card of cards) {
+      const rect = card.getBoundingClientRect();
+      if (rect.top < window.innerHeight * 0.6 && rect.bottom > window.innerHeight * 0.4) {
+        const dateStr = card.getAttribute('data-date');
+        const activeItem = timeline.querySelector(`.timeline-item[data-date="${dateStr}"]`);
+        if (activeItem) {
+          activeItem.classList.add('active');
+        }
+        break;
+      }
+    }
+  }
+  
+  window.addEventListener('scroll', updateActive);
+  updateActive();
+});
+</script>
+```
