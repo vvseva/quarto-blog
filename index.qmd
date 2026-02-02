@@ -93,6 +93,7 @@ visOptions(autoResize = TRUE)
 </div>
 :::
 
+<!--
 ::: {.cookie-notice}
 <div class="system-titlebar"><span class="system-title">🍪 Cookie Notice</span></div>
 <div class="cookie-content">
@@ -103,6 +104,7 @@ visOptions(autoResize = TRUE)
 </div>
 </div>
 :::
+-->
 
 ::: {.chat-widget}
 <button class="chat-button" onclick="document.querySelector('.chat-popup').style.display = 'block'; this.style.display = 'none';">

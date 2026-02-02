@@ -6,6 +6,9 @@ project:
 
 website:
   title: "Vsevolod Suschevskiy"
+  cookie-consent:
+    type: express
+    style: simple
   google-analytics: "G-Y7VNLGL37W"
   navbar:
     right:
