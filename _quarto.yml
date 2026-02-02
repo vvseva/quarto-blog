@@ -6,6 +6,7 @@ project:
 
 website:
   title: "Vsevolod Suschevskiy"
+  google-analytics: "G-Y7VNLGL37W"
   navbar:
     right:
       - projects.qmd
