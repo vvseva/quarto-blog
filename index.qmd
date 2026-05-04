@@ -31,7 +31,7 @@ In 2025 I started a PhD at Linköping University, Sweden where I work with Miria
 
 ::: {.system-window}
 <div class="system-titlebar"><span class="system-title"><a href="https://scholar.google.com/citations?hl=en&user=TycFXMIAAAAJ&view_op=list_works&sortby=pubdate" target="_blank">Latest Publications</a></span></div>
-<div class="system-content">
+::: {.system-content}
 
 ```{r}
 #| echo: false
@@ -59,7 +59,7 @@ for (i in seq_len(nrow(pubs))) {
 }
 cat('</ul>\n')
 ```
-</div>
+:::
 :::
 
 ::: {.system-window}
@@ -87,7 +87,7 @@ Last, but not by the amount of time it required, I worked as (1) an invited lect
 
 ::: {.system-window .system-6}
 <div class="system-titlebar"><span class="system-title">Test of visnetwork</span></div>
-<div class="system-content">
+::: {.system-content}
 
 ```{r}
 require(visNetwork, quietly = TRUE)
@@ -102,7 +102,7 @@ visEdges(arrows = "to") |>
 visHierarchicalLayout() |>
 visOptions(autoResize = TRUE)
 ```
-</div>
+:::
 :::
 
 :::
