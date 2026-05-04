@@ -49,13 +49,14 @@ $frosted-opacity: .3 !default;
 
 body {
   background-image: $body-bg-image;
+  font-size: clamp(1.05rem, 2.5vw, 1.1rem);
 }
 
 // Fonts
 
 // stylelint-disable value-keyword-case
 $font-family-sans-serif:      "Source Serif 4" !default;
-$font-family-serif:           "Source Serif 4" serif !default;
+$font-family-serif:           "Source Serif 4", serif !default;
 // stylelint-enable
 
 $font-size-base:              1.1rem !default;
