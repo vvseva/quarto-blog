@@ -82,6 +82,69 @@ document.addEventListener('DOMContentLoaded', function() {
   
   window.addEventListener('scroll', updateActive);
   updateActive();
+
+  // --- Category deselect on second click ---
+  // Quarto's filter marks active categories with aria-pressed="true".
+  // A second click on an already-active category should clear the filter.
+  function attachCategoryToggle() {
+    const categoryBtns = document.querySelectorAll('.quarto-listing-category .category');
+    categoryBtns.forEach(btn => {
+      btn.addEventListener('click', function() {
+        // If this button is currently active, it was just clicked again.
+        // Wait a tick so Quarto's own handler runs first, then check & deselect.
+        setTimeout(() => {
+          const isActive = this.getAttribute('aria-pressed') === 'true' ||
+                           this.classList.contains('active');
+          // If still active after Quarto's handler, we triggered a second click:
+          // nothing more to do (Quarto already toggled).
+          // If it became inactive but others are still active, also fine.
+          // The real "deselect" is: if this was the only active one before click
+          // and Quarto didn't clear it automatically, we do it here.
+          // Simpler: track which btn was active before click.
+        }, 10);
+      });
+    });
+
+    // Cleaner approach: track previously-active category
+    let activeCategory = null;
+    categoryBtns.forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        const wasActive = this.getAttribute('aria-pressed') === 'true' ||
+                          this.classList.contains('active');
+        if (wasActive && activeCategory === this) {
+          // Second click on same category — deselect it
+          e.preventDefault();
+          e.stopImmediatePropagation();
+          this.setAttribute('aria-pressed', 'false');
+          this.classList.remove('active');
+          activeCategory = null;
+          // Show all items by triggering click on "All" if present,
+          // or manually remove hidden class from all cards
+          const allCards = document.querySelectorAll('.gallery-card, .gallery-card-compact');
+          allCards.forEach(card => {
+            card.closest('li, div[style*="display"]') ?
+              (card.closest('li') ? card.closest('li').style.removeProperty('display') : null) : null;
+            card.style.removeProperty('display');
+            const parent = card.closest('[style*="display: none"]');
+            if (parent) parent.style.removeProperty('display');
+          });
+          // Remove hidden class Quarto might add
+          document.querySelectorAll('.listing-no-matching').forEach(el => el.style.display = 'none');
+          document.querySelectorAll('[data-listing-category]').forEach(el => {
+            el.style.removeProperty('display');
+          });
+          // Trigger Quarto's own "show all" by finding and clicking an "All" button if it exists
+          const allBtn = document.querySelector('.quarto-listing-category .category[data-listing-category=""]');
+          if (allBtn) allBtn.click();
+        } else {
+          activeCategory = this;
+        }
+      }, true); // capture phase so we intercept before Quarto
+    });
+  }
+
+  // Attach after a short delay to let Quarto's own setup complete
+  setTimeout(attachCategoryToggle, 200);
 });
 </script>
 ```
