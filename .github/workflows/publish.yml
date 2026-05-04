@@ -18,7 +18,7 @@ jobs:
           r-version: 'release' # Installs the latest release of R
 
       - name: Install R engine dependencies
-        run: Rscript -e 'install.packages(c("rmarkdown", "knitr"))'
+        run: Rscript -e 'install.packages(c("rmarkdown", "knitr", "scholar", "visNetwork"))'
         
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
