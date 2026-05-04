@@ -137,7 +137,7 @@
 }
 </style>
 
-<div class="list grid" style="grid-template-columns: 1fr 1fr 1fr; grid-template-rows: auto auto; column-gap: 1rem; row-gap: 1rem;">
+<div class="list grid" style="grid-template-columns: 1fr 1fr; grid-template-rows: auto auto; column-gap: 1.2rem; row-gap: 1.2rem;">
 
 <% 
 // First item - full card spanning 3 columns
@@ -151,7 +151,7 @@ if (!imageUrl && firstItem.description) {
 }
 %>
 
-<div class="card gallery-card-compact" style="grid-column: span 3; grid-row: 1;" <%= metadataAttrs(firstItem) %>>
+<div class="card gallery-card-compact" style="grid-column: span 2; grid-row: 1;" <%= metadataAttrs(firstItem) %>>
   <% if (imageUrl) { %>
   <a href="<%- firstItem.path %>">
     <img src="<%- imageUrl %>" alt="<%- firstItem.title %>" class="card-img-top"/>
@@ -177,9 +177,6 @@ if (!imageUrl && firstItem.description) {
   </div>
   
   <div class="card-footer text-muted">
-    <% if (firstItem.author) { %>
-    <span class="listing-author"><%= firstItem.author %></span>
-    <% } %>
     <% if (firstItem.date) { %>
     <span class="listing-date"><%= firstItem.date %></span>
     <% } %>
@@ -187,10 +184,9 @@ if (!imageUrl && firstItem.description) {
 </div>
 
 <% 
-// Remaining items - title only with hover preview, each in row 2
+// Remaining items - title only with hover preview (up to 3 more)
 for (let i = 1; i < items.length && i < 4; i++) { 
   const item = items[i];
-  const col = i; // columns 1, 2, 3
   let itemImageUrl = item.image;
   if (!itemImageUrl && item.description) {
     const imgMatch = item.description.match(/!\[.*?\]\((.*?)\)/);
@@ -199,7 +195,7 @@ for (let i = 1; i < items.length && i < 4; i++) {
     }
   }
 %>
-<div class="card gallery-card-compact compact-title-only" style="grid-column: <%= col %>; grid-row: 2;" <%= metadataAttrs(item) %>>
+<div class="card gallery-card-compact compact-title-only" <%= metadataAttrs(item) %>>
   <% if (itemImageUrl) { %>
   <img src="<%- itemImageUrl %>" alt="<%- item.title %>" class="card-img-top"/>
   <% } %>

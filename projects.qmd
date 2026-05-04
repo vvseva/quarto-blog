@@ -8,7 +8,7 @@ listing:
     categories: true
     sort-ui: false
     filter-ui: false
-    fields: [title, date, categories, image, description, author, subtitle]
+    fields: [title, date, categories, image, description, subtitle]
     max-description-length: 300
 page-layout: full
 title-block-banner: false
@@ -85,53 +85,53 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // --- Category deselect on second click ---
   // Quarto marks active categories with aria-pressed="true".
-  // A second click on an already-active category clears the filter.
+  // After Quarto toggles a category off, if no categories remain active,
+  // ensure all items are visible again.
   function attachCategoryToggle() {
+    const listingEl = document.getElementById('posts');
     const categoryBtns = document.querySelectorAll('.quarto-listing-category .category');
-    let activeCategory = null;
+
+    function showAllItems() {
+      // Remove inline display:none from all listing cards and their containers
+      const allItems = listingEl
+        ? listingEl.querySelectorAll('[data-listing-categories], .gallery-card, .gallery-card-compact')
+        : document.querySelectorAll('[data-listing-categories], .gallery-card, .gallery-card-compact');
+      allItems.forEach(el => {
+        el.style.removeProperty('display');
+        const li = el.closest('li');
+        if (li) li.style.removeProperty('display');
+      });
+      // Also clear any outer container that Quarto may have hidden
+      document.querySelectorAll('[data-listing-category]').forEach(el => {
+        el.style.removeProperty('display');
+      });
+      document.querySelectorAll('.listing-no-matching').forEach(el => {
+        el.style.display = 'none';
+      });
+    }
 
     categoryBtns.forEach(btn => {
-      btn.addEventListener('click', function(e) {
+      btn.addEventListener('click', function() {
         const wasActive = this.getAttribute('aria-pressed') === 'true' ||
                           this.classList.contains('active');
-        if (wasActive && activeCategory === this) {
-          // Second click on same category — deselect it
-          e.preventDefault();
-          e.stopImmediatePropagation();
-          this.setAttribute('aria-pressed', 'false');
-          this.classList.remove('active');
-          activeCategory = null;
-
-          // Restore visibility of all listing items
-          const allCards = document.querySelectorAll('.gallery-card, .gallery-card-compact');
-          allCards.forEach(card => {
-            card.style.removeProperty('display');
-            const listItem = card.closest('li');
-            if (listItem) {
-              listItem.style.removeProperty('display');
+        if (wasActive) {
+          // This button was active — Quarto will toggle it off.
+          // After Quarto's handler runs, check if any category remains active.
+          setTimeout(() => {
+            const anyActive = [...categoryBtns].some(b =>
+              b.getAttribute('aria-pressed') === 'true' || b.classList.contains('active')
+            );
+            if (!anyActive) {
+              showAllItems();
             }
-            const hiddenParent = card.closest('[style*="display: none"]');
-            if (hiddenParent) {
-              hiddenParent.style.removeProperty('display');
-            }
-          });
-          document.querySelectorAll('.listing-no-matching').forEach(el => el.style.display = 'none');
-          document.querySelectorAll('[data-listing-category]').forEach(el => {
-            el.style.removeProperty('display');
-          });
-
-          // Trigger Quarto's own "show all" button if it exists
-          const allBtn = document.querySelector('.quarto-listing-category .category[data-listing-category=""]');
-          if (allBtn) allBtn.click();
-        } else {
-          activeCategory = this;
+          }, 30);
         }
-      }, true); // capture phase so we run before Quarto's handler
+      });
     });
   }
 
   // Attach after a short delay to let Quarto's own setup complete
-  setTimeout(attachCategoryToggle, 200);
+  setTimeout(attachCategoryToggle, 300);
 });
 </script>
 ```

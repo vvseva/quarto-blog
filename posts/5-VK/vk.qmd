@@ -2,7 +2,7 @@
 title: "Friendship and Social Grooming in VK"
 author: "Vsevolod Suschevskiy"
 date: "2021-07-015"
-categories: [SNA, internship]
+categories: [SNA]
 image: "dunbar_flows.png"
 ---
 

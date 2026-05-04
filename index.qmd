@@ -9,7 +9,7 @@ listing:
     sort: "date desc"
     max-items: 4
     template: _extensions/custom-listing/gallery-compact.ejs
-    fields: [image, title, date, description, categories, author]
+    fields: [image, title, date, description, categories]
 ---
 
 ::: {style="font-size: 0.01rem; color: rgba(0, 0, 0, 0.01);"}
@@ -30,23 +30,38 @@ In 2025 I started a PhD at Linköping University, Sweden where I work with Miria
 :::
 
 ::: {.system-window}
-<div class="system-titlebar"><span class="system-title"><a href="https://scholar.google.com/citations?hl=en&user=TycFXMIAAAAJ&view_op=list_works&sortby=pubdate" target="_blank">Publications</a></span></div>
+<div class="system-titlebar"><span class="system-title"><a href="https://scholar.google.com/citations?hl=en&user=TycFXMIAAAAJ&view_op=list_works&sortby=pubdate" target="_blank">Latest Publications</a></span></div>
 <div class="system-content">
-<ul class="system-publications-list">
-  <li>
-    <span class="pub-title"><a href="https://www.researchgate.net/publication/350874550_Creating_a_Course_Recommendation_System_for_Exchange_Students" target="_blank">Creating a Course Recommendation System for Exchange Students</a></span>
-    <span class="pub-meta">Suschevskiy V., Khalil M. — LAK '21 Companion (2021)</span>
-  </li>
-  <li>
-    <span class="pub-title">Analyzing Classroom Intervention with Mixed Models and SEMs</span>
-    <span class="pub-meta">Suschevskiy V. et al. — Journal of Internet and Higher Education (submitted)</span>
-  </li>
-  <li>
-    <span class="pub-title">Self-Nudges on Motivation in Crowdsourcing Platforms</span>
-    <span class="pub-meta">Suschevskiy V., Musabirov I. — Toloka Research Grant (2022)</span>
-  </li>
-</ul>
-<p style="font-size:11px; margin-top:0.5rem;"><a href="https://scholar.google.com/citations?hl=en&user=TycFXMIAAAAJ&view_op=list_works&sortby=pubdate" target="_blank">→ Full list on Google Scholar</a></p>
+
+```{r}
+#| echo: false
+#| results: asis
+library(scholar)
+pubs <- get_publications("TycFXMIAAAAJ")
+pubs <- pubs[order(-pubs$year), ][seq_len(min(3L, nrow(pubs))), ]
+cat('<ul class="system-publications-list">\n')
+for (i in seq_len(nrow(pubs))) {
+  p <- pubs[i, ]
+  title <- p$title
+  journal <- if (!is.na(p$journal) && nchar(trimws(p$journal)) > 0) trimws(p$journal) else ""
+  year <- p$year
+  pubid <- p$pubid
+  url <- paste0(
+    "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=TycFXMIAAAAJ&citation_for_view=TycFXMIAAAAJ:",
+    pubid
+  )
+  meta <- if (nchar(journal) > 0) paste0(journal, " \u00b7 ", year) else as.character(year)
+  cat(sprintf(
+    '  <li><span class="pub-title"><a href="%s" target="_blank">%s</a></span><span class="pub-meta">%s</span></li>\n',
+    url, title, meta
+  ))
+}
+cat('</ul>\n')
+cat(sprintf(
+  '<p style="font-size:11px; margin-top:0.5rem;"><a href="%s" target="_blank">\u2192 Full list on Google Scholar</a></p>\n',
+  "https://scholar.google.com/citations?hl=en&user=TycFXMIAAAAJ&view_op=list_works&sortby=pubdate"
+))
+```
 </div>
 :::
 

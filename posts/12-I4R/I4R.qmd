@@ -2,7 +2,7 @@
 title: "Replication Game"
 author: "Vsevolod Suschevskiy"
 date: "2024-10-20"
-categories: [news, publication, replication]
+categories: [news, publication, open science]
 image: "good.png"
 ---
 
