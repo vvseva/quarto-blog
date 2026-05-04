@@ -2,7 +2,7 @@
 title: "Student engagement profiles in a mobile app"
 author: "Vsevolod Suschevskiy"
 date: "2026-01-22"
-categories: [publication, learning analytics, visualization]
+categories: [publication, visualization]
 image: "LPA_GGPLOT4_fixed3_bee_annotated_white.png"
 ---
 

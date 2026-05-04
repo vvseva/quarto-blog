@@ -2,7 +2,7 @@
 title: "Adaptive Experiment NetLogo"
 author: "Vsevolod Suschevskiy"
 date: "2024-07-21"
-categories: [experiment, ABM]
+categories: [experiment, simulation]
 image: "netlogo.png"
 ---
 

@@ -8,7 +8,7 @@ listing:
     categories: true
     sort-ui: false
     filter-ui: false
-    fields: [title, date, categories, image, description, author, subtitle]
+    fields: [title, date, categories, image, description, subtitle]
     max-description-length: 300
 page-layout: full
 title-block-banner: false
@@ -82,6 +82,65 @@ document.addEventListener('DOMContentLoaded', function() {
   
   window.addEventListener('scroll', updateActive);
   updateActive();
+
+  // --- Category deselect on second click ---
+  // Quarto marks active categories with aria-pressed="true".
+  // After Quarto toggles a category off, if no categories remain active,
+  // ensure all items are visible again.
+  function attachCategoryToggle() {
+    const listingEl = document.getElementById('posts');
+    const categoryBtns = document.querySelectorAll('.quarto-listing-category .category');
+
+    function showAllItems() {
+      // Remove inline display:none from all listing cards and their containers
+      const allItems = listingEl
+        ? listingEl.querySelectorAll('[data-listing-categories], .gallery-card, .gallery-card-compact')
+        : document.querySelectorAll('[data-listing-categories], .gallery-card, .gallery-card-compact');
+      allItems.forEach(el => {
+        el.style.removeProperty('display');
+        const li = el.closest('li');
+        if (li) li.style.removeProperty('display');
+      });
+      // Also clear any outer container that Quarto may have hidden
+      document.querySelectorAll('[data-listing-category]').forEach(el => {
+        el.style.removeProperty('display');
+      });
+      document.querySelectorAll('.listing-no-matching').forEach(el => {
+        el.style.display = 'none';
+      });
+    }
+
+    categoryBtns.forEach(btn => {
+      btn.addEventListener('click', function() {
+        const wasActive = this.getAttribute('aria-pressed') === 'true' ||
+                          this.classList.contains('active');
+        if (wasActive) {
+          // This button was active — Quarto will toggle it off.
+          // Wait one animation frame + a short tick so Quarto's synchronous
+          // handler and any pending DOM updates complete before we check.
+          requestAnimationFrame(() => setTimeout(() => {
+            const anyActive = [...categoryBtns].some(b =>
+              b.getAttribute('aria-pressed') === 'true' || b.classList.contains('active')
+            );
+            if (!anyActive) {
+              showAllItems();
+            }
+          }, 0));
+        }
+      });
+    });
+  }
+
+  // Attach after DOM is ready and Quarto's listing JS has had time to initialise.
+  // We poll until the category buttons are present, then attach once.
+  (function waitForCategories(attempts) {
+    const btns = document.querySelectorAll('.quarto-listing-category .category');
+    if (btns.length > 0) {
+      attachCategoryToggle();
+    } else if (attempts > 0) {
+      setTimeout(() => waitForCategories(attempts - 1), 100);
+    }
+  })(20); // up to 2 seconds of retries
 });
 </script>
 ```

@@ -2,7 +2,7 @@
 title: "Human-AI teams"
 author: "Vsevolod Suschevskiy"
 date: "2024-05-18"
-categories: [experiment]
+categories: [experiment, SNA]
 image: "CODE2023 STRONG.jpg"
 ---
 

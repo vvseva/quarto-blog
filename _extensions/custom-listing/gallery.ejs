@@ -153,7 +153,7 @@
 }
 </style>
 
-<div class="list grid" style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); column-gap: 1.5rem; row-gap: 1.5rem; grid-auto-flow: dense;">
+<div class="list grid" style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); column-gap: 1.2rem; row-gap: 1.2rem; grid-auto-flow: dense;">
 
 <% for (let i = 0; i < items.length; i++) { 
   const item = items[i];
@@ -215,9 +215,6 @@
     </div>
     
     <div class="card-footer text-muted py-1 px-2 small">
-      <% if (item.author) { %>
-      <span class="listing-author"><%= item.author %></span>
-      <% } %>
       <% if (item.date) { %>
       <span class="listing-date"><%= item.date %></span>
       <% } %>

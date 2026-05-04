@@ -2,7 +2,7 @@
 title: "Multi-Agent Simulation"
 author: "Vsevolod Suschevskiy"
 date: "2024-07-24"
-categories: [simulation, LLMs]
+categories: [simulation]
 image: "streamlit.png"
 ---
 

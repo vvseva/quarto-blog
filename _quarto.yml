@@ -14,6 +14,9 @@ website:
     right:
       - projects.qmd
       - teaching.qmd
+      - text: "Publications"
+        href: "https://scholar.google.com/citations?hl=en&user=TycFXMIAAAAJ&view_op=list_works&sortby=pubdate"
+        target: _blank
       - icon: github
         href: https://github.com/vvseva
         target: _blank
