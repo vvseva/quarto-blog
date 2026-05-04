@@ -37,8 +37,9 @@ In 2025 I started a PhD at Linköping University, Sweden where I work with Miria
 #| echo: false
 #| results: asis
 library(scholar)
+n_pubs <- 3L  # number of latest publications to display
 pubs <- get_publications("TycFXMIAAAAJ")
-pubs <- pubs[order(-pubs$year), ][seq_len(min(3L, nrow(pubs))), ]
+pubs <- pubs[order(-pubs$year), ][seq_len(min(n_pubs, nrow(pubs))), ]
 cat('<ul class="system-publications-list">\n')
 for (i in seq_len(nrow(pubs))) {
   p <- pubs[i, ]

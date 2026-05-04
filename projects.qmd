@@ -116,22 +116,31 @@ document.addEventListener('DOMContentLoaded', function() {
                           this.classList.contains('active');
         if (wasActive) {
           // This button was active — Quarto will toggle it off.
-          // After Quarto's handler runs, check if any category remains active.
-          setTimeout(() => {
+          // Wait one animation frame + a short tick so Quarto's synchronous
+          // handler and any pending DOM updates complete before we check.
+          requestAnimationFrame(() => setTimeout(() => {
             const anyActive = [...categoryBtns].some(b =>
               b.getAttribute('aria-pressed') === 'true' || b.classList.contains('active')
             );
             if (!anyActive) {
               showAllItems();
             }
-          }, 30);
+          }, 0));
         }
       });
     });
   }
 
-  // Attach after a short delay to let Quarto's own setup complete
-  setTimeout(attachCategoryToggle, 300);
+  // Attach after DOM is ready and Quarto's listing JS has had time to initialise.
+  // We poll until the category buttons are present, then attach once.
+  (function waitForCategories(attempts) {
+    const btns = document.querySelectorAll('.quarto-listing-category .category');
+    if (btns.length > 0) {
+      attachCategoryToggle();
+    } else if (attempts > 0) {
+      setTimeout(() => waitForCategories(attempts - 1), 100);
+    }
+  })(20); // up to 2 seconds of retries
 });
 </script>
 ```
