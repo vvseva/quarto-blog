@@ -44,4 +44,4 @@ mainfont: "Source Serif 4"
 editor: visual
 
 execute:
-  freeze: false
+  freeze: true
