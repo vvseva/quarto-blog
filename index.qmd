@@ -29,36 +29,7 @@ In 2025 I started a PhD at Linköping University, Sweden where I work with Miria
 </div>
 :::
 
-::: {.system-window}
-<div class="system-titlebar"><span class="system-title"><a href="https://scholar.google.com/citations?hl=en&user=TycFXMIAAAAJ&view_op=list_works&sortby=pubdate" target="_blank">Latest Publications</a></span></div>
-::: {.system-content}
 
-```{r, echo = FALSE}
-#| echo: false
-#| results: asis
-library(scholar)
-n_pubs <- 3L  # number of latest publications to display
-pubs <- get_publications("TycFXMIAAAAJ")
-pubs <- pubs[order(-pubs$year), ][seq_len(min(n_pubs, nrow(pubs))), ]
-cat('<ul class="system-publications-list">\n')
-for (i in seq_len(nrow(pubs))) {
-  p <- pubs[i, ]
-  title <- p$title
-  journal <- if (!is.na(p$journal) && nchar(trimws(p$journal)) > 0) trimws(p$journal) else ""
-  year <- p$year
-  pubid <- p$pubid
-  url <- paste0(
-    "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=TycFXMIAAAAJ&citation_for_view=TycFXMIAAAAJ:",
-    pubid
-  )
-  meta <- if (nchar(journal) > 0) paste0(journal, " \u00b7 ", year) else as.character(year)
-  cat(sprintf(
-    '  <li><span class="pub-title"><a href="%s" target="_blank">%s</a></span><span class="pub-meta">%s</span></li>\n',
-    url, title, meta
-  ))
-}
-cat('</ul>\n')
-```
 :::
 :::
 
@@ -84,6 +55,35 @@ Last, but not by the amount of time it required, I worked as (1) an invited lect
 </div>
 :::
 
+::: {.system-window}
+<div class="system-titlebar"><span class="system-title"><a href="https://scholar.google.com/citations?hl=en&user=TycFXMIAAAAJ&view_op=list_works&sortby=pubdate" target="_blank">Latest Publications</a></span></div>
+::: {.system-content}
+
+```{r, echo = FALSE}
+#| results: asis
+library(scholar)
+n_pubs <- 3L  # number of latest publications to display
+pubs <- get_publications("TycFXMIAAAAJ")
+pubs <- pubs[order(-pubs$year), ][seq_len(min(n_pubs, nrow(pubs))), ]
+cat('<ul class="system-publications-list">\n')
+for (i in seq_len(nrow(pubs))) {
+  p <- pubs[i, ]
+  title <- p$title
+  journal <- if (!is.na(p$journal) && nchar(trimws(p$journal)) > 0) trimws(p$journal) else ""
+  year <- p$year
+  pubid <- p$pubid
+  url <- paste0(
+    "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=TycFXMIAAAAJ&citation_for_view=TycFXMIAAAAJ:",
+    pubid
+  )
+  meta <- if (nchar(journal) > 0) paste0(journal, " \u00b7 ", year) else as.character(year)
+  cat(sprintf(
+    '  <li><span class="pub-title"><a href="%s" target="_blank">%s</a></span><span class="pub-meta">%s</span></li>\n',
+    url, title, meta
+  ))
+}
+cat('</ul>\n')
+```
 
 ::: {.system-window .system-6}
 <div class="system-titlebar"><span class="system-title">Test of visnetwork</span></div>
