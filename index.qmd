@@ -33,7 +33,7 @@ In 2025 I started a PhD at Linköping University, Sweden where I work with Miria
 <div class="system-titlebar"><span class="system-title"><a href="https://scholar.google.com/citations?hl=en&user=TycFXMIAAAAJ&view_op=list_works&sortby=pubdate" target="_blank">Latest Publications</a></span></div>
 ::: {.system-content}
 
-```{r}
+```{r, echo = FALSE}
 #| echo: false
 #| results: asis
 library(scholar)
