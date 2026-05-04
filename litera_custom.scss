@@ -1203,7 +1203,7 @@ blockquote p {
 }
 
 .system-photo-left {
-  /* removed absolute positioning — now part of .home-sidebar grid area */
+  /* positioning handled by .home-sidebar grid area */
 }
 
 .system-photo-window .system-content {
@@ -1310,10 +1310,6 @@ blockquote p {
 
   .system-photo-window {
     max-width: 100%;
-  }
-
-  .system-photo-left {
-    /* no overrides needed — static in flow */
   }
 
   .system-photo {
