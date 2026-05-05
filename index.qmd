@@ -60,28 +60,40 @@ Teaching has also been a central part of my work. At Northwestern I TAed for Soc
 ```{r, echo = FALSE}
 #| results: asis
 library(scholar)
-n_pubs <- 3L  # number of latest publications to display
-pubs <- get_publications("TycFXMIAAAAJ")
-pubs <- pubs[order(-pubs$year), ][seq_len(min(n_pubs, nrow(pubs))), ]
+
+# Wrap in a tryCatch to be extra safe against network errors
+pubs <- tryCatch({
+  get_publications("TycFXMIAAAAJ")
+}, error = function(e) NA)
+
 cat('<ul class="system-publications-list">\n')
-for (i in seq_len(nrow(pubs))) {
-  p <- pubs[i, ]
-  title <- p$title
-  journal <- if (!is.na(p$journal) && nchar(trimws(p$journal)) > 0) trimws(p$journal) else ""
-  year <- p$year
-  pubid <- p$pubid
-  url <- paste0(
-    "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=TycFXMIAAAAJ&citation_for_view=TycFXMIAAAAJ:",
-    pubid
-  )
-  meta <- if (nchar(journal) > 0) paste0(journal, " \u00b7 ", year) else as.character(year)
-  cat(sprintf(
-    '  <li><span class="pub-title"><a href="%s" target="_blank">%s</a></span><span class="pub-meta">%s</span></li>\n',
-    url, title, meta
-  ))
+
+# Check if pubs is a valid data frame with rows
+if (is.data.frame(pubs) && nrow(pubs) > 0) {
+  n_pubs <- 3L  
+  pubs <- pubs[order(-pubs$year), ][seq_len(min(n_pubs, nrow(pubs))), ]
+  
+  for (i in seq_len(nrow(pubs))) {
+    p <- pubs[i, ]
+    title <- p$title
+    journal <- if (!is.na(p$journal) && nchar(trimws(p$journal)) > 0) trimws(p$journal) else ""
+    year <- p$year
+    pubid <- p$pubid
+    url <- paste0(
+      "[https://scholar.google.com/citations?view_op=view_citation&hl=en&user=TycFXMIAAAAJ&citation_for_view=TycFXMIAAAAJ](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=TycFXMIAAAAJ&citation_for_view=TycFXMIAAAAJ):",
+      pubid
+    )
+    meta <- if (nchar(journal) > 0) paste0(journal, " \u00b7 ", year) else as.character(year)
+    cat(sprintf(
+      '  <li><span class="pub-title"><a href="%s" target="_blank">%s</a></span><span class="pub-meta">%s</span></li>\n',
+      url, title, meta
+    ))
+  }
+} else {
+  # Fallback HTML if Google Scholar blocks the request
+  cat('  <li><span class="pub-title">Publications temporarily unavailable.</span><span class="pub-meta"><a href="[https://scholar.google.com/citations?hl=en&user=TycFXMIAAAAJ](https://scholar.google.com/citations?hl=en&user=TycFXMIAAAAJ)" target="_blank">View on Google Scholar</a></span></li>\n')
 }
 cat('</ul>\n')
-```
 :::
 :::
 
