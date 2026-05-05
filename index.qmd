@@ -84,25 +84,6 @@ for (i in seq_len(nrow(pubs))) {
 :::
 :::
 
-::: {.system-window .system-6}
-<div class="system-titlebar"><span class="system-title">Test of visnetwork</span></div>
-::: {.system-content}
-
-```{r, , echo = FALSE}
-require(visNetwork, quietly = TRUE)
-# minimal example
-nodes <- data.frame(id = 1:9,
-label = c("Seva", "Social Network Analysis", "Analytical Sociology", "Virtual Labs",
-"Deployment", "Design of Experiments", "ERGMs", "DyNAMs", "Micro-Macro"),
-level = c(1, 2, 2, 2, 3, 3, 3, 3, 3))
-edges <- data.frame(from = c(1,1, 1, 4, 4, 2, 2, 3), to = c(2, 3, 4, 5, 6, 7, 8, 9))
-visNetwork(nodes, edges, width = "100%", height = "400px") |> 
-visEdges(arrows = "to") |> 
-visHierarchicalLayout() |>
-visOptions(autoResize = TRUE)
-```
-:::
-:::
 
 :::
 
