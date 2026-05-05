@@ -94,6 +94,7 @@ if (is.data.frame(pubs) && nrow(pubs) > 0) {
   cat('  <li><span class="pub-title">Publications temporarily unavailable.</span><span class="pub-meta"><a href="[https://scholar.google.com/citations?hl=en&user=TycFXMIAAAAJ](https://scholar.google.com/citations?hl=en&user=TycFXMIAAAAJ)" target="_blank">View on Google Scholar</a></span></li>\n')
 }
 cat('</ul>\n')
+```
 :::
 :::
 
