@@ -83,28 +83,6 @@ $btn-border-radius:           1.078em !default;
 $btn-border-radius-lg:        2.688em !default;
 $btn-border-radius-sm:        .844em !default;
 
-.btn {
-  min-height: 44px; // Touch-friendly height
-  min-width: 44px; // Touch-friendly width
-  padding: 0 20px;
-  text-align: center;
-  background: $gray-100 !important;
-  border-style: solid  !important;
-  border-width: 5.5px  !important;
-  border-image: url("./icon/button.svg") 30 stretch !important;
-  color: $secondary  !important;
-  text-align: center  !important;
-  text-decoration: none  !important;
-  font-size: 18px !important;
-  border-radius: 0 !important;
-  cursor: pointer  !important;
-  
-  @media (max-width: $bp-mobile) {
-    padding: 0.5rem 1rem;
-    font-size: 16px !important; // Prevent iOS zoom
-  }
-}
-
 // Forms
 
 $input-border-color:                    rgba(0, 0, 0, .1) !default;
@@ -129,6 +107,28 @@ $alert-border-width:                0 !default;
 // Breakpoints — defined here so they are available in both sections
 $bp-mobile:  768px;  // phones and small tablets → single-column, stacked nav
 $bp-tablet:  900px;  // tablets → collapse two-column home layout
+
+.btn {
+  min-height: 44px; // Touch-friendly height
+  min-width: 44px; // Touch-friendly width
+  padding: 0 20px;
+  text-align: center;
+  background: $gray-100 !important;
+  border-style: solid  !important;
+  border-width: 5.5px  !important;
+  border-image: url("./icon/button.svg") 30 stretch !important;
+  color: $secondary  !important;
+  text-align: center  !important;
+  text-decoration: none  !important;
+  font-size: 18px !important;
+  border-radius: 0 !important;
+  cursor: pointer  !important;
+  
+  @media (max-width: $bp-mobile) {
+    padding: 0.5rem 1rem;
+    font-size: 16px !important; // Prevent iOS zoom
+  }
+}
 
 // Mixin: Mac System 6 striped titlebar pattern
 @mixin striped-titlebar($stripe-color: #000000) {
