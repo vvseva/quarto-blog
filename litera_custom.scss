@@ -45,11 +45,13 @@ $min-contrast-ratio:   1.85 !default;
 $body-color:                $gray-800 !default;
 
 $body-bg-image: linear-gradient(90deg, lighten($cyan, 35%), lighten($yellow, 35%), lighten($cyan, 35%), lighten($pink, 35%)) !default;
-$frosted-opacity: .3 !default;
 
 body {
   background-image: $body-bg-image;
   font-size: clamp(1.05rem, 2.5vw, 1.1rem);
+  // Safety net: prevents horizontal scroll caused by elements that briefly
+  // exceed viewport width (e.g. the visNetwork widget on narrow screens).
+  overflow-x: hidden;
 }
 
 // Fonts
@@ -97,7 +99,7 @@ $btn-border-radius-sm:        .844em !default;
   border-radius: 0 !important;
   cursor: pointer  !important;
   
-  @media (max-width: 768px) {
+  @media (max-width: $bp-mobile) {
     padding: 0.5rem 1rem;
     font-size: 16px !important; // Prevent iOS zoom
   }
@@ -129,11 +131,17 @@ $alert-border-width:                0 !default;
 /*-- scss:rules --*/
 
 
-// Variables
+// Breakpoints
+$bp-mobile:  768px;  // phones and small tablets → single-column, stacked nav
+$bp-tablet:  900px;  // tablets → collapse two-column home layout
 
-// Responsive typography with CSS clamp
-body {
-  font-size: clamp(1.05rem, 2.5vw, 1.1rem);
+// Mixin: Mac System 6 striped titlebar pattern
+@mixin striped-titlebar($stripe-color: #000000) {
+  background-image: linear-gradient(transparent 50%, $stripe-color 50%);
+  background-size: 100% 4px;
+  background-repeat: repeat;
+  background-clip: content-box;
+  background-origin: content-box;
 }
 
 // Navbar - System 6 style
@@ -142,11 +150,10 @@ body {
   font-size: $font-size-sm;
   flex-direction: column;
   margin: clamp(0.5rem, 2vw, 1rem);
-  min-width: 320px;
   overflow: hidden;
   background-color: $gray-100;
   
-  @media (max-width: 768px) {
+  @media (max-width: $bp-mobile) {
     margin: 0.25rem;
     font-size: 0.9rem;
   }
@@ -238,18 +245,14 @@ body {
   z-index: 9999;
   animation: slideUp 0.3s ease-out;
   
-  @media (max-width: 768px) {
+  @media (max-width: $bp-mobile) {
     bottom: 0.5rem;
     width: 95%;
     max-width: 100%;
   }
   
   .system-titlebar {
-    background-image: linear-gradient(transparent 50%, #000000 50%);
-    background-size: 100% 4px;
-    background-repeat: repeat;
-    background-clip: content-box;
-    background-origin: content-box;
+    @include striped-titlebar();
     padding: 0.5rem 1rem;
     border-bottom: 3px solid $black;
     font-weight: 600;
@@ -322,7 +325,7 @@ body {
   right: 1rem;
   z-index: 9998;
   
-  @media (max-width: 768px) {
+  @media (max-width: $bp-mobile) {
     bottom: 0.5rem;
     right: 0.5rem;
   }
@@ -345,7 +348,7 @@ body {
   font-size: 1rem;
   animation: pulse 2s infinite;
   
-  @media (max-width: 768px) {
+  @media (max-width: $bp-mobile) {
     padding: 0.6rem 1rem;
     font-size: 0.9rem;
   }
@@ -386,18 +389,14 @@ body {
   box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.5);
   animation: slideInRight 0.3s ease-out;
   
-  @media (max-width: 768px) {
+  @media (max-width: $bp-mobile) {
     bottom: 0.5rem;
     right: 0.5rem;
     width: calc(100vw - 1rem);
   }
   
   .system-titlebar {
-    background-image: linear-gradient(transparent 50%, #000000 50%);
-    background-size: 100% 4px;
-    background-repeat: repeat;
-    background-clip: content-box;
-    background-origin: content-box;
+    @include striped-titlebar();
     padding: 0.5rem 1rem;
     border-bottom: 3px solid $black;
     font-weight: 600;
@@ -592,44 +591,36 @@ body {
   margin-right: 1rem;
   margin-left: 1rem;
   
-  @media (max-width: 768px) {
+  @media (max-width: $bp-mobile) {
     margin-right: 0.5rem;
     margin-left: 0.5rem;
   }
 }
 
-.column-body{
-//  width: 105% !important;
+.column-body {
   fill: $gray-100 !important;
   padding: 0 !important;
-  max-width: 65ch; // Optimal reading width
-  margin: 0 auto;
   
-  @media (max-width: 768px) {
-    max-width: 100%;
+  @media (max-width: $bp-mobile) {
     padding: 0 0.5rem !important;
   }
 }
 
 .quarto-title-block {
   flex-direction: column;
-  // only right margin
-  //margin-right: 1rem;
-  min-width: 320px;
   overflow: hidden;
   background-color: $gray-100;
   border: 0.1em solid $secondary;
 }
 
-.quarto-title-banner{
+.quarto-title-banner {
   flex-direction: column;
   margin: 2rem;
-  min-width: 320px;
   overflow: hidden;
   background-color: $gray-100;
   border: 0.1em solid $secondary;
   padding-top: 0;
-   padding-bottom: 0;
+  padding-bottom: 0;
 }
 
 .quarto-title {
@@ -704,7 +695,7 @@ body {
     height: auto;
     max-height: 300px; // Prevent huge images on mobile
     
-    @media (max-width: 768px) {
+    @media (max-width: $bp-mobile) {
       max-height: 250px;
     }
   }
@@ -753,10 +744,6 @@ body {
 }
 
 // Typography
-
-p {
-  font-family: $font-family-serif;
-}
 
 // Text justification for better reading
 #hero-heading p, 
@@ -978,40 +965,14 @@ div.sourceCode {
   font-size: 0.85rem;
   border: 1px solid rgba(0, 0, 0, 0.1);
   
-  @media (max-width: 768px) {
+  @media (max-width: $bp-mobile) {
     font-size: 0.75rem;
   }
 }
 
 pre.sourceCode {
-  @media (max-width: 768px) {
+  @media (max-width: $bp-mobile) {
     padding: 0.5rem;
-  }
-}
-
-// Retro web aesthetic - subtle borders on sections
-article, section {
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 1rem;
-  margin-bottom: 1rem;
-  background-color: rgba(255, 255, 255, 0.6);
-  
-  @media (max-width: 768px) {
-    padding: 0.5rem;
-    margin-bottom: 0.5rem;
-  }
-}
-
-// Retro web aesthetic - subtle borders on sections
-article, section {
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 1rem;
-  margin-bottom: 1rem;
-  background-color: rgba(255, 255, 255, 0.6);
-  
-  @media (max-width: 768px) {
-    padding: 0.5rem;
-    margin-bottom: 0.5rem;
   }
 }
 
@@ -1120,8 +1081,10 @@ blockquote p {
   grid-template-areas: "main sidebar";
   gap: 0.75rem;
   align-items: start;
+  width: 100%;
+  box-sizing: border-box;
 
-  @media (max-width: 768px) {
+  @media (max-width: $bp-tablet) {
     grid-template-columns: 1fr;
     grid-template-areas:
       "sidebar"
@@ -1138,7 +1101,7 @@ blockquote p {
   position: sticky;
   top: 1rem;
 
-  @media (max-width: 768px) {
+  @media (max-width: $bp-tablet) {
     position: static;
   }
 }
@@ -1165,10 +1128,7 @@ blockquote p {
   font-size: 12px;
   font-weight: bold;
   background-color: $gray-100;
-  background-image: linear-gradient(transparent 50%, #000000 50%);
-  background-size: 100% 4px;
-  background-clip: content-box;
-  background-origin: content-box;
+  @include striped-titlebar();
   color: #000000;
   padding: 8px 12px;
   border-bottom: 2px solid #000000;
@@ -1230,8 +1190,7 @@ blockquote p {
 
 .system-window.system-6 .system-titlebar {
   background-color: $gray-100;
-  background-image: linear-gradient(transparent 50%, #20c997 50%);
-  background-size: 100% 4px;
+  @include striped-titlebar(#20c997);
   color: #0b1f17;
   border-bottom-color: #20c997;
 }
@@ -1276,8 +1235,7 @@ blockquote p {
 
 .system-window.system-featured .system-titlebar {
   background-color: #fffbf0;
-  background-image: linear-gradient(transparent 50%, #fd7e14 50%);
-  background-size: 100% 4px;
+  @include striped-titlebar(#fd7e14);
   color: #fd7e14;
   border-bottom-color: #fd7e14;
   font-weight: bold;
@@ -1292,7 +1250,7 @@ blockquote p {
   color: #fd7e14;
 }
 
-@media (max-width: 768px) {
+@media (max-width: $bp-mobile) {
   .system-window .system-content {
     padding: 8px 10px;
   }
@@ -1537,7 +1495,7 @@ li {
 }
 
 table {
-  @media (max-width: 768px) {
+  @media (max-width: $bp-mobile) {
     font-size: 0.8rem;
   }
 }
