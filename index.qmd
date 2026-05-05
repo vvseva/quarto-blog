@@ -80,6 +80,7 @@ for (i in seq_len(nrow(pubs))) {
     url, title, meta
   ))
 }
+cat('</ul>\n')
 ```
 :::
 :::
