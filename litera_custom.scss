@@ -46,6 +46,11 @@ $body-color:                $gray-800 !default;
 
 $body-bg-image: linear-gradient(90deg, lighten($cyan, 35%), lighten($yellow, 35%), lighten($cyan, 35%), lighten($pink, 35%)) !default;
 
+// Prevent horizontal scroll on iOS Safari (body alone is not enough there).
+html {
+  overflow-x: hidden;
+}
+
 body {
   background-image: $body-bg-image;
   font-size: clamp(1.05rem, 2.5vw, 1.1rem);
@@ -107,6 +112,10 @@ $alert-border-width:                0 !default;
 // Breakpoints — defined here so they are available in both sections
 $bp-mobile:  768px;  // phones and small tablets → single-column, stacked nav
 $bp-tablet:  900px;  // tablets → collapse two-column home layout
+
+// Allow the Quarto page-grid body column to shrink below its default 500px
+// minimum on narrow screens (e.g. iPhone 14 Pro Max at 430 px CSS width).
+$grid-body-column-min: 320px;
 
 .btn {
   min-height: 44px; // Touch-friendly height
