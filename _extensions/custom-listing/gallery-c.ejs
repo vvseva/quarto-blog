@@ -139,70 +139,77 @@
 
 <div class="list grid" style="grid-template-columns: 1fr 1fr; grid-template-rows: auto auto; column-gap: 1.2rem; row-gap: 1.2rem;">
 
-<% 
-// First item - full card spanning 3 columns
-const firstItem = items[0];
-let imageUrl = firstItem.image;
-if (!imageUrl && firstItem.description) {
-  const imgMatch = firstItem.description.match(/!\[.*?\]\((.*?)\)/);
-  if (imgMatch) {
-    imageUrl = imgMatch[1];
-  }
-}
-%>
-
-<div class="card gallery-card-compact" style="grid-column: span 2; grid-row: 1;" <%= metadataAttrs(firstItem) %>>
-  <% if (imageUrl) { %>
-  <a href="<%- firstItem.path %>">
-    <img src="<%- imageUrl %>" alt="<%- firstItem.title %>" class="card-img-top"/>
-  </a>
-  <% } %>
-  
-  <div class="card-header">
-    <a href="<%- firstItem.path %>" class="listing-title"><%= firstItem.title %></a>
-  </div>
-  
-  <div class="card-body">
-    <% if (firstItem.description) { %>
-    <p class="card-text listing-description"><%= firstItem.description %></p>
-    <% } %>
-    
-    <% if (firstItem.categories && firstItem.categories.length > 0) { %>
-    <div class="listing-categories">
-      <% for (const category of firstItem.categories) { %>
-      <span class="listing-category badge bg-secondary"><%= category %></span>
-      <% } %>
-    </div>
-    <% } %>
-  </div>
-  
-  <div class="card-footer text-muted">
-    <% if (firstItem.date) { %>
-    <span class="listing-date"><%= firstItem.date %></span>
-    <% } %>
-  </div>
-</div>
-
-<% 
-// Remaining items - title only with hover preview (up to 3 more)
-for (let i = 1; i < items.length && i < 4; i++) { 
-  const item = items[i];
-  let itemImageUrl = item.image;
-  if (!itemImageUrl && item.description) {
-    const imgMatch = item.description.match(/!\[.*?\]\((.*?)\)/);
+<% if (items && items.length > 0) { %>
+  <% 
+  // First item - full card spanning 3 columns
+  const firstItem = items[0];
+  let imageUrl = firstItem.image;
+  if (!imageUrl && firstItem.description) {
+    const imgMatch = firstItem.description.match(/!\[.*?\]\((.*?)\)/);
     if (imgMatch) {
-      itemImageUrl = imgMatch[1];
+      imageUrl = imgMatch[1];
     }
   }
-%>
-<div class="card gallery-card-compact compact-title-only" <%= metadataAttrs(item) %>>
-  <% if (itemImageUrl) { %>
-  <img src="<%- itemImageUrl %>" alt="<%- item.title %>" class="card-img-top"/>
-  <% } %>
-  <div class="card-header">
-    <a href="<%- item.path %>" class="listing-title"><%= item.title %></a>
+  %>
+
+  <div class="card gallery-card-compact" style="grid-column: span 2; grid-row: 1;" <%= metadataAttrs(firstItem) %>>
+    <% if (imageUrl) { %>
+    <a href="<%- firstItem.path %>">
+      <img src="<%- imageUrl %>" alt="<%- firstItem.title %>" class="card-img-top"/>
+    </a>
+    <% } %>
+    
+    <div class="card-header">
+      <a href="<%- firstItem.path %>" class="listing-title"><%= firstItem.title %></a>
+    </div>
+    
+    <div class="card-body">
+      <% if (firstItem.description) { %>
+      <p class="card-text listing-description"><%= firstItem.description %></p>
+      <% } %>
+      
+      <% if (firstItem.categories && firstItem.categories.length > 0) { %>
+      <div class="listing-categories">
+        <% for (const category of firstItem.categories) { %>
+        <span class="listing-category badge bg-secondary"><%= category %></span>
+        <% } %>
+      </div>
+      <% } %>
+    </div>
+    
+    <div class="card-footer text-muted">
+      <% if (firstItem.date) { %>
+      <span class="listing-date"><%= firstItem.date %></span>
+      <% } %>
+    </div>
   </div>
-</div>
+
+  <% 
+  // Remaining items - title only with hover preview (up to 3 more)
+  for (let i = 1; i < items.length && i < 4; i++) { 
+    const item = items[i];
+    let itemImageUrl = item.image;
+    if (!itemImageUrl && item.description) {
+      const imgMatch = item.description.match(/!\[.*?\]\((.*?)\)/);
+      if (imgMatch) {
+        itemImageUrl = imgMatch[1];
+      }
+    }
+  %>
+  <div class="card gallery-card-compact compact-title-only" <%= metadataAttrs(item) %>>
+    <% if (itemImageUrl) { %>
+    <img src="<%- itemImageUrl %>" alt="<%- item.title %>" class="card-img-top"/>
+    <% } %>
+    <div class="card-header">
+      <a href="<%- item.path %>" class="listing-title"><%= item.title %></a>
+    </div>
+  </div>
+  <% } %>
+
+<% } else { %>
+  <div style="grid-column: span 2; font-family: 'Chicago', 'Monaco', monospace; padding: 1rem;">
+    <p>No projects found.</p>
+  </div>
 <% } %>
 
 </div>
