@@ -126,12 +126,7 @@ $badge-padding-x:                   1.2em !default;
 
 $alert-border-width:                0 !default;
 
-
-
-/*-- scss:rules --*/
-
-
-// Breakpoints
+// Breakpoints — defined here so they are available in both sections
 $bp-mobile:  768px;  // phones and small tablets → single-column, stacked nav
 $bp-tablet:  900px;  // tablets → collapse two-column home layout
 
@@ -143,6 +138,11 @@ $bp-tablet:  900px;  // tablets → collapse two-column home layout
   background-clip: content-box;
   background-origin: content-box;
 }
+
+
+
+/*-- scss:rules --*/
+
 
 // Navbar - System 6 style
 
