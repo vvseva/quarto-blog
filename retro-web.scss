@@ -5511,3 +5511,76 @@ body {
 	opacity: 0;
 	opacity: 0;
 }
+/* System 1 Retro Slider */
+.bio-slider-container {
+  /* Ensure the container matches the retro styling */
+  border-bottom: 2px solid #000 !important; /* Thicker, sharper line instead of dotted */
+  padding-bottom: 1.5rem;
+
+  input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    background: transparent;
+    margin: 10px 0;
+    cursor: pointer;
+
+    /* Remove default focus outline to replace with custom if needed */
+    &:focus {
+      outline: none;
+    }
+
+    /* --- The Track --- */
+    &::-webkit-slider-runnable-track {
+      width: 100%;
+      height: 12px;
+      /* Classic System 1 scrollbar track pattern: a checkerboard or stark hollow box */
+      background: #fff;
+      border: 1px solid #000;
+      /* Adding a crisp, retro drop shadow */
+      box-shadow: 1px 1px 0px #000; 
+    }
+    
+    &::-moz-range-track {
+      width: 100%;
+      height: 12px;
+      background: #fff;
+      border: 1px solid #000;
+      box-shadow: 1px 1px 0px #000;
+    }
+
+    /* --- The Thumb (The draggable part) --- */
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      height: 20px;
+      width: 16px;
+      background: #fff;
+      border: 1px solid #000;
+      border-radius: 0; /* Strictly square */
+      /* Creating a 'grip' texture using inset box shadows */
+      box-shadow: 1px 1px 0px #000, inset 4px 0 0px #fff, inset 5px 0 0px #000, inset 8px 0 0px #fff, inset 9px 0 0px #000;
+      margin-top: -5px; /* Center the thumb on the track */
+    }
+
+    &::-moz-range-thumb {
+      height: 20px;
+      width: 16px;
+      background: #fff;
+      border: 1px solid #000;
+      border-radius: 0;
+      box-shadow: 1px 1px 0px #000, inset 4px 0 0px #fff, inset 5px 0 0px #000, inset 8px 0 0px #fff, inset 9px 0 0px #000;
+    }
+
+    /* Active/Focus states for interaction feedback */
+    &:active::-webkit-slider-thumb {
+      background: #000;
+      /* Invert the grip texture when clicked */
+      box-shadow: 1px 1px 0px #fff, inset 4px 0 0px #000, inset 5px 0 0px #fff, inset 8px 0 0px #000, inset 9px 0 0px #fff;
+    }
+    
+    &:active::-moz-range-thumb {
+      background: #000;
+      box-shadow: 1px 1px 0px #fff, inset 4px 0 0px #000, inset 5px 0 0px #fff, inset 8px 0 0px #000, inset 9px 0 0px #fff;
+    }
+  }
+}
