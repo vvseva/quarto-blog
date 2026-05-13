@@ -44,58 +44,53 @@ In June 2025, I began my PhD at Linköping University in Sweden, working alongsi
 
 <div class="bio-slider-container" style="margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px dotted #000;">
   <label for="bio-slider" style="display: block; font-weight: bold; margin-bottom: 0.5rem;">
-    Detail level: <span id="bio-level-label">Detailed</span>
+    Detail level: <span id="bio-level-label">Reasonable</span>
   </label>
-  <input type="range" id="bio-slider" min="1" max="3" value="3" style="width: 100%; cursor: pointer;">
+  <input type="range" id="bio-slider" min="1" max="3" value="2" style="width: 100%; cursor: pointer;">
 </div>
 
-<div id="bio-text-1">
-Before moving to Sweden, I spent time at Northwestern University's [Technology and Social Behavior](https://tsb.northwestern.edu/) joint program, working as a research assistant at the [SONIC](http://sonic.northwestern.edu/) lab. There, I used social network analysis to investigate how human-AI teams interact and communicate. I am also a somewhat active participant in open science initiatives, including replication games and massive collaborative research projects.
-</div>
+<div id="bio-content">
 
-<div id="bio-text-2">
-<br>
-Earlier, I was a research assistant at the [University of Bergen](https://www.uib.no/en/persons/Vsevolod.Suschevskiy). In collaboration with Mohammad Khalil at [SLATE](https://slate.uib.no/), I helped create CERES—a virtual lab designed to study course recommendation systems. We launched a pilot experiment with real students and published a [paper](https://www.researchgate.net/publication/350874550_Creating_a_Course_Recommendation_System_for_Exchange_Students) detailing the platform's initial iteration. During this time, I also analyzed classroom interventions using mixed models and structural equation modeling.
+In 2022, I was at Northwestern University's [Technology and Social Behavior](https://tsb.northwestern.edu/) CS + Communication joint program, working as a research assistant at the [SONIC](http://sonic.northwestern.edu/) lab.<span class="bio-standard-up"> There, I used social network analysis to investigate how human-AI teams interact and communicate.</span><span class="bio-detailed-up"> I was also a somewhat active participant in open science initiatives, including replication games and massive collaborative research projects.</span>
 
-<br>
-I studied [Human-Computer Interaction](https://spb.hse.ru/en/ma/computer/) at HSE University. Under the supervision of [Ilya Musabirov](https://dotsbyname.quarto.pub/imusabirov/), my thesis research—funded by a grant from Toloka—explored how self-nudging affects personal motivation.
-</div>
+Around 2019, I was a research assistant at the [University of Bergen](https://www.uib.no/en/persons/Vsevolod.Suschevskiy), working with Mohammad Khalil at [SLATE](https://slate.uib.no/)<span class="bio-brief-only">.</span><span class="bio-standard-up">, where I helped create CERES—a virtual lab designed to study course recommendation systems. We launched a pilot experiment with real students and published a [paper](https://www.researchgate.net/publication/350874550_Creating_a_Course_Recommendation_System_for_Exchange_Students) detailing the platform's initial iteration.</span><span class="bio-detailed-up"> During this time, I also analyzed classroom interventions using mixed models and structural equation modeling.</span>
 
-<div id="bio-text-3">
-<br>
-Teaching has also been a central part of my work. At Northwestern I TAed for Social Network Analysis, Human-Computer Interaction, and Intro to Computer Programming classes for undergraduates, as well as some MS of Communication courses. At HSE University, I served as an invited lecturer for a [Data Science minor](https://electives.hse.ru/minor_data_spb/), introducing computational social science and R (*tidyverse*, *tidymodels*, and *shiny*) to a cohort of 200 non-STEM students. I have taught graduate-level courses on "Small Data Science" for political scientists and "Intro to Experiments" for HCI students. Finally, I co-lectured a Data Visualization course with [Anastasia Kuznetsova](https://t.me/nastengraph) at the [European University at St. Petersburg](https://eusp.org/programs/applied-data-analysis). *(Course materials will eventually be available [here](/teaching.html)).*
+In 2020 I studied [Human-Computer Interaction](https://spb.hse.ru/en/ma/computer/) at HSE University under the supervision of [Ilya Musabirov](https://dotsbyname.quarto.pub/imusabirov/)<span class="bio-brief-only">.</span><span class="bio-standard-only">, where my thesis research explored how self-nudging affects personal motivation.</span><span class="bio-detailed-up">, where my thesis research—funded by a grant from Toloka—explored how self-nudging affects personal motivation. I run experiments with hundreds of crowdworkers.</span>
+
+::: {.bio-detailed-block}
+In 2016 I was a BA student in Sociology and Social Informatics at HSE University. My undegraduate thesis was about computational representations of theories in computational social science. Social Network Analysis + Structural Topic Model.
+
+Teaching also takes time. At Northwestern I TAed for Social Network Analysis, Human-Computer Interaction, and Intro to Computer Programming classes for undergraduates, as well as some MS of Communication courses. At HSE University, I served as an invited lecturer for a [Data Science minor](https://electives.hse.ru/minor_data_spb/), introducing computational social science and R (*tidyverse*, *tidymodels*, and *shiny*) to a cohort of 200 non-STEM students. I have taught graduate-level courses on "Small Data Science" for political scientists and "Intro to Experiments" for HCI students. Finally, I co-lectured a Data Visualization course with [Anastasia Kuznetsova](https://t.me/nastengraph) at the [European University at St. Petersburg](https://eusp.org/programs/applied-data-analysis). *(Course materials will eventually be available [here](/teaching.html)).*
+
+I like climbing plastic rocks and take photos.
+:::
+
 </div>
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
   const slider = document.getElementById("bio-slider");
   const label = document.getElementById("bio-level-label");
-  const text1 = document.getElementById("bio-text-1");
-  const text2 = document.getElementById("bio-text-2");
-  const text3 = document.getElementById("bio-text-3");
 
   function updateBio() {
     const val = parseInt(slider.value);
-    if (val === 1) {
-      label.textContent = "Brief";
-      text1.style.display = "block";
-      text2.style.display = "none";
-      text3.style.display = "none";
-    } else if (val === 2) {
-      label.textContent = "Standard";
-      text1.style.display = "block";
-      text2.style.display = "block";
-      text3.style.display = "none";
-    } else {
-      label.textContent = "Detailed";
-      text1.style.display = "block";
-      text2.style.display = "block";
-      text3.style.display = "block";
-    }
+    
+    if (val === 1) label.textContent = "Brief";
+    else if (val === 2) label.textContent = "Reasonable";
+    else label.textContent = "Long";
+
+    document.querySelectorAll('.bio-brief-only').forEach(el => el.style.display = (val === 1) ? 'inline' : 'none');
+    document.querySelectorAll('.bio-standard-only').forEach(el => el.style.display = (val === 2) ? 'inline' : 'none');
+    document.querySelectorAll('.bio-standard-up').forEach(el => el.style.display = (val >= 2) ? 'inline' : 'none');
+    document.querySelectorAll('.bio-detailed-up').forEach(el => el.style.display = (val === 3) ? 'inline' : 'none');
+    
+    document.querySelectorAll('.bio-detailed-block').forEach(el => el.style.display = (val === 3) ? 'block' : 'none');
   }
 
-  slider.addEventListener("input", updateBio);
-  updateBio(); // Initialize state on load
+  if(slider) {
+      slider.addEventListener("input", updateBio);
+      updateBio(); // Initialize on load
+  }
 });
 </script>
 
@@ -163,7 +158,7 @@ cat('</ul>\n')
 ::: {.system-window .system-hero}
 <div class="system-titlebar"><span class="system-title">About</span></div>
 <div class="system-content">
-Please call me <span onclick="let p = document.getElementById('name-phonetics'); p.style.display = (p.style.display === 'none') ? 'inline' : 'none';" style="cursor: pointer; border-bottom: 1px dotted currentColor;" title="Click for pronunciation">Seva</span><span id="name-phonetics" style="display: none; font-size: 0.85em; background: rgba(128,128,128,0.15); padding: 2px 6px; border-radius: 4px; margin: 0 6px;">(Name: ˈfsʲevələt, but you can call me Seva (sʲeva))</span>, and here is my [CV](cv/cv_page.html).
+Please call me <span onclick="let p = document.getElementById('name-phonetics'); p.style.display = (p.style.display === 'none') ? 'inline' : 'none';" style="cursor: pointer; border-bottom: 1px dotted currentColor;" title="Click for pronunciation">Seva</span><span id="name-phonetics" style="display: none; font-size: 0.85em; background: rgba(128,128,128,0.15); padding: 2px 6px; border-radius: 4px; margin: 0 6px;"> <br> (It is Vsevolod (ˈfsʲevələt), but it is ok to call me Seva (sʲeva))</span>, and here is my [CV](cv/cv_page.html).
 
 <div class="system-pills">
 <a class="system-pill" href="projects.html">Projects</a>
