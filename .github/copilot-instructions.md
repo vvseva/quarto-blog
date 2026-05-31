@@ -10,7 +10,7 @@ Quick facts (big picture)
 
 Where to make content changes (source of truth)
 - Edit the `.qmd` files under the repository root and `posts/` (e.g. `posts/11-OCMC24/ocmc24.qmd` and the data file `posts/11-OCMC24/ocmc24.csv`).
-- For site-wide configuration and styling, edit `_quarto.yml` (theme, navbar, resources) and the custom scss/css files at the repo root (e.g. `litera_custom.scss`, `styles.css`).
+- For site-wide configuration and styling, edit `_quarto.yml` (theme, navbar, resources) and the active custom stylesheet at the repo root (`litera_custom.scss`).
 
 Local developer workflow (commands you can run locally)
 - Build the site locally: run `quarto render .` in the repository root.
