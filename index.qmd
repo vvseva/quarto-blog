@@ -109,7 +109,7 @@ document.addEventListener("DOMContentLoaded", function() {
 ```{r}
 #| results: asis
 #| echo: false
-#| warnings: false
+#| warning: false
 library(scholar)
 
 # Wrap in a tryCatch to be extra safe against network errors
