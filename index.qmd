@@ -42,13 +42,58 @@ In June 2025, I began my PhD at Linköping University in Sweden, working alongsi
 <div class="system-titlebar"><span class="system-title">Bio</span></div>
 <div class="system-content">
 
-Before moving to Sweden, I spent time at Northwestern University's [Technology and Social Behavior](https://tsb.northwestern.edu/) joint program, working as a research assistant at the [SONIC](http://sonic.northwestern.edu/) lab. There, I used social network analysis to investigate how human-AI teams interact and communicate. I am also a somewhat active participant in open science initiatives, including replication games and massive collaborative research projects.
+<div class="bio-slider-container" style="margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px dotted #000;">
+  <label for="bio-slider" style="display: block; font-weight: bold; margin-bottom: 0.5rem;">
+    Detail level: <span id="bio-level-label">Reasonable</span>
+  </label>
+  <input type="range" id="bio-slider" min="1" max="3" value="2" style="width: 100%; cursor: pointer;">
+</div>
 
-Earlier, I was a research assistant at the [University of Bergen](https://www.uib.no/en/persons/Vsevolod.Suschevskiy). In collaboration with Mohammad Khalil at [SLATE](https://slate.uib.no/), I helped create CERES—a virtual lab designed to study course recommendation systems. We launched a pilot experiment with real students and published a [paper](https://www.researchgate.net/publication/350874550_Creating_a_Course_Recommendation_System_for_Exchange_Students) detailing the platform's initial iteration. During this time, I also analyzed classroom interventions using mixed models and structural equation modeling.
+<div id="bio-content">
 
-I studied [Human-Computer Interaction](https://spb.hse.ru/en/ma/computer/) at HSE University. Under the supervision of [Ilya Musabirov](https://dotsbyname.quarto.pub/imusabirov/), my thesis research—funded by a grant from Toloka—explored how self-nudging affects personal motivation.
+In 2022, I was at Northwestern University's [Technology and Social Behavior](https://tsb.northwestern.edu/) CS + Communication joint program, working as a research assistant at the [SONIC](http://sonic.northwestern.edu/) lab.<span class="bio-standard-up"> There, I used social network analysis to investigate how human-AI teams interact and communicate.</span><span class="bio-detailed-up"> I was also a somewhat active participant in open science initiatives, including replication games and massive collaborative research projects.</span>
 
-Teaching has also been a central part of my work. At Northwestern I TAed for Social Network Analysis, Human-Computer Interaction, and Intro to Computer Programming classes for undergraduates, as well as some MS of Communication courses. At HSE University, I served as an invited lecturer for a [Data Science minor](https://electives.hse.ru/minor_data_spb/), introducing computational social science and R (*tidyverse*, *tidymodels*, and *shiny*) to a cohort of 200 non-STEM students. I have taught graduate-level courses on "Small Data Science" for political scientists and "Intro to Experiments" for HCI students. Finally, I co-lectured a Data Visualization course with [Anastasia Kuznetsova](https://t.me/nastengraph) at the [European University at St. Petersburg](https://eusp.org/programs/applied-data-analysis). *(Course materials will eventually be available [here](/teaching.html)).*
+Around 2019, I was a research assistant at the [University of Bergen](https://www.uib.no/en/persons/Vsevolod.Suschevskiy), working with Mohammad Khalil at [SLATE](https://slate.uib.no/)<span class="bio-brief-only">.</span><span class="bio-standard-up">, where I helped create CERES—a virtual lab designed to study course recommendation systems. We launched a pilot experiment with real students and published a [paper](https://www.researchgate.net/publication/350874550_Creating_a_Course_Recommendation_System_for_Exchange_Students) detailing the platform's initial iteration.</span><span class="bio-detailed-up"> During this time, I also analyzed classroom interventions using mixed models and structural equation modeling.</span>
+
+In 2020 I studied [Human-Computer Interaction](https://spb.hse.ru/en/ma/computer/) at HSE University under the supervision of [Ilya Musabirov](https://dotsbyname.quarto.pub/imusabirov/)<span class="bio-brief-only">.</span><span class="bio-standard-only">, where my thesis research explored how self-nudging affects personal motivation.</span><span class="bio-detailed-up">, where my thesis research—funded by a grant from Toloka—explored how self-nudging affects personal motivation. I run experiments with hundreds of crowdworkers.</span>
+
+::: {.bio-detailed-block}
+In 2016 I was a BA student in Sociology and Social Informatics at HSE University. My undegraduate thesis was about computational representations of theories in computational social science. Social Network Analysis + Structural Topic Model.
+
+Teaching also takes time. At Northwestern I TAed for Social Network Analysis, Human-Computer Interaction, and Intro to Computer Programming classes for undergraduates, as well as some MS of Communication courses. At HSE University, I served as an invited lecturer for a [Data Science minor](https://electives.hse.ru/minor_data_spb/), introducing computational social science and R (*tidyverse*, *tidymodels*, and *shiny*) to a cohort of 200 non-STEM students. I have taught graduate-level courses on "Small Data Science" for political scientists and "Intro to Experiments" for HCI students. Finally, I co-lectured a Data Visualization course with [Anastasia Kuznetsova](https://t.me/nastengraph) at the [European University at St. Petersburg](https://eusp.org/programs/applied-data-analysis). *(Course materials will eventually be available [here](/teaching.html)).*
+
+I like climbing plastic rocks and take photos.
+:::
+
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const slider = document.getElementById("bio-slider");
+  const label = document.getElementById("bio-level-label");
+
+  function updateBio() {
+    const val = parseInt(slider.value);
+    
+    if (val === 1) label.textContent = "Brief";
+    else if (val === 2) label.textContent = "Reasonable";
+    else label.textContent = "Long";
+
+    document.querySelectorAll('.bio-brief-only').forEach(el => el.style.display = (val === 1) ? 'inline' : 'none');
+    document.querySelectorAll('.bio-standard-only').forEach(el => el.style.display = (val === 2) ? 'inline' : 'none');
+    document.querySelectorAll('.bio-standard-up').forEach(el => el.style.display = (val >= 2) ? 'inline' : 'none');
+    document.querySelectorAll('.bio-detailed-up').forEach(el => el.style.display = (val === 3) ? 'inline' : 'none');
+    
+    document.querySelectorAll('.bio-detailed-block').forEach(el => el.style.display = (val === 3) ? 'block' : 'none');
+  }
+
+  if(slider) {
+      slider.addEventListener("input", updateBio);
+      updateBio(); // Initialize on load
+  }
+});
+</script>
+
 </div>
 :::
 
@@ -60,49 +105,44 @@ Teaching has also been a central part of my work. At Northwestern I TAed for Soc
 ```{r, echo = FALSE}
 #| results: asis
 library(scholar)
-n_pubs <- 3L  # number of latest publications to display
-pubs <- get_publications("TycFXMIAAAAJ")
-pubs <- pubs[order(-pubs$year), ][seq_len(min(n_pubs, nrow(pubs))), ]
+
+# Wrap in a tryCatch to be extra safe against network errors
+pubs <- tryCatch({
+  get_publications("TycFXMIAAAAJ")
+}, error = function(e) NA)
+
 cat('<ul class="system-publications-list">\n')
-for (i in seq_len(nrow(pubs))) {
-  p <- pubs[i, ]
-  title <- p$title
-  journal <- if (!is.na(p$journal) && nchar(trimws(p$journal)) > 0) trimws(p$journal) else ""
-  year <- p$year
-  pubid <- p$pubid
-  url <- paste0(
-    "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=TycFXMIAAAAJ&citation_for_view=TycFXMIAAAAJ:",
-    pubid
-  )
-  meta <- if (nchar(journal) > 0) paste0(journal, " \u00b7 ", year) else as.character(year)
-  cat(sprintf(
-    '  <li><span class="pub-title"><a href="%s" target="_blank">%s</a></span><span class="pub-meta">%s</span></li>\n',
-    url, title, meta
-  ))
+
+# Check if pubs is a valid data frame with rows
+if (is.data.frame(pubs) && nrow(pubs) > 0) {
+  n_pubs <- 3L  
+  pubs <- pubs[order(-pubs$year), ][seq_len(min(n_pubs, nrow(pubs))), ]
+  
+  for (i in seq_len(nrow(pubs))) {
+    p <- pubs[i, ]
+    title <- p$title
+    journal <- if (!is.na(p$journal) && nchar(trimws(p$journal)) > 0) trimws(p$journal) else ""
+    year <- p$year
+    pubid <- p$pubid
+    url <- paste0(
+      "[https://scholar.google.com/citations?view_op=view_citation&hl=en&user=TycFXMIAAAAJ&citation_for_view=TycFXMIAAAAJ](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=TycFXMIAAAAJ&citation_for_view=TycFXMIAAAAJ):",
+      pubid
+    )
+    meta <- if (nchar(journal) > 0) paste0(journal, " \u00b7 ", year) else as.character(year)
+    cat(sprintf(
+      '  <li><span class="pub-title"><a href="%s" target="_blank">%s</a></span><span class="pub-meta">%s</span></li>\n',
+      url, title, meta
+    ))
+  }
+} else {
+  # Fallback HTML if Google Scholar blocks the request
+  cat('  <li><span class="pub-title">Publications temporarily unavailable.</span><span class="pub-meta"><a href="[https://scholar.google.com/citations?hl=en&user=TycFXMIAAAAJ](https://scholar.google.com/citations?hl=en&user=TycFXMIAAAAJ)" target="_blank">View on Google Scholar</a></span></li>\n')
 }
+cat('</ul>\n')
 ```
 :::
 :::
 
-::: {.system-window .system-6}
-<div class="system-titlebar"><span class="system-title">Test of visnetwork</span></div>
-::: {.system-content}
-
-```{r, , echo = FALSE}
-require(visNetwork, quietly = TRUE)
-# minimal example
-nodes <- data.frame(id = 1:9,
-label = c("Seva", "Social Network Analysis", "Analytical Sociology", "Virtual Labs",
-"Deployment", "Design of Experiments", "ERGMs", "DyNAMs", "Micro-Macro"),
-level = c(1, 2, 2, 2, 3, 3, 3, 3, 3))
-edges <- data.frame(from = c(1,1, 1, 4, 4, 2, 2, 3), to = c(2, 3, 4, 5, 6, 7, 8, 9))
-visNetwork(nodes, edges, width = "100%", height = "400px") |> 
-visEdges(arrows = "to") |> 
-visHierarchicalLayout() |>
-visOptions(autoResize = TRUE)
-```
-:::
-:::
 
 :::
 
@@ -118,7 +158,7 @@ visOptions(autoResize = TRUE)
 ::: {.system-window .system-hero}
 <div class="system-titlebar"><span class="system-title">About</span></div>
 <div class="system-content">
-Please call me Seva, and here is my [CV](cv/cv_page.html).
+Please call me <span onclick="let p = document.getElementById('name-phonetics'); p.style.display = (p.style.display === 'none') ? 'inline' : 'none';" style="cursor: pointer; border-bottom: 1px dotted currentColor;" title="Click for pronunciation">Seva</span><span id="name-phonetics" style="display: none; font-size: 0.85em; background: rgba(128,128,128,0.15); padding: 2px 6px; border-radius: 4px; margin: 0 6px;"> <br> (It is Vsevolod (ˈfsʲevələt), but it is ok to call me Seva (sʲeva))</span>, and here is my [CV](cv/cv_page.html).
 
 <div class="system-pills">
 <a class="system-pill" href="projects.html">Projects</a>
