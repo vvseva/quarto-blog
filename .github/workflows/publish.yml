@@ -18,5 +18,7 @@ jobs:
       - name: Render and Publish 
         uses: quarto-dev/quarto-actions/publish@v2
         with:
-          target: quarto-pub
-          QUARTO_PUB_AUTH_TOKEN: ${{ secrets.QUARTO_PUB_AUTH_TOKEN }}
+          target: connect
+          CONNECT_SERVER: ${{ secrets.CONNECT_SERVER }}
+        env:
+          CONNECT_API_KEY: ${{ secrets.CONNECT_API_KEY }}
