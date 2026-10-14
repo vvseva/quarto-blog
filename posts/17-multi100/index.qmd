@@ -5,19 +5,18 @@ author: "Vsevolod Suschevskiy"
 date: "2026-04-15"
 categories: [news, publication, open science]
 image: "multi100_robustness.png"
-description: "Fifty percent of social and behavioural science findings are not robust to a multi-analyst approach. Kind of. Reflections on my first paper in Nature as co-author #300-something."
 ---
 
-Fifty percent of social and behavioural science findings are not robust to a multi-analyst approach. Kind of. 
+Fifty percent of social and behavioural science findings are not robust to a multi-analyst approach. Kind of.
 
 This is also my first paper in *Nature*, where I am a co-author. Kind of.
 
 ![](multi100_robustness.png)
 
-> **Paper**: Aczél, B., Szaszi, B., Nosek, B. A., et al. (2026). *Investigating the analytical robustness of the social and behavioural sciences*. **Nature**.  
-> [Read on Nature](https://doi.org/10.1038/s41586-025-09844-9){target="_blank"} | [Discussion on LinkedIn](https://www.linkedin.com/feed/update/urn:li:activity:7186358133346914304/){target="_blank"}
+> **Paper**: Aczél, B., Szaszi, B., Nosek, B. A., et al. (2026). *Investigating the analytical robustness of the social and behavioural sciences*. **Nature**.\
+> [Read on Nature](https://doi.org/10.1038/s41586-025-09844-9){target="_blank"} \| [Discussion on LinkedIn](https://www.linkedin.com/feed/update/urn:li:activity:7186358133346914304/){target="_blank"}
 
-***
+------------------------------------------------------------------------
 
 ### Becoming "Backup Re-Analyst 2"
 
@@ -31,13 +30,13 @@ I ran some version of ANOVA, submitted the $p$-value, Cohen’s $d$, and degrees
 
 ### The 1,000-Comment Google Doc
 
-Almost a year later, a new email arrived in my inbox: **Update Before Manuscript Submission**. 
+Almost a year later, a new email arrived in my inbox: **Update Before Manuscript Submission**.
 
 The Multi100 team had drafted a *Nature* submission, and all I had to do was check my affiliation. Technically, I could have contributed to a spreadsheet with comments, but there were already over a thousand comments ranging from typos and punctuation marks to fundamental disagreements with the conceptual framing. I decided not to add to the core team's suffering.
 
 A few months later, the draft was submitted to *Nature*, and a few months after that, it received extremely positive reviews. I don’t think I will ever see:
 
-> *"[\...] It should be published. A few thoughts for the authors to consider: [\...]"*
+> *"\[...\] It should be published. A few thoughts for the authors to consider: \[...\]"*
 
 regarding my own standalone work anytime soon.
 
