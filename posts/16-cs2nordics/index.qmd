@@ -9,7 +9,7 @@ description: "Presented joint work with Benjamin Jarvis at CS2Nordics 2026 explo
 
 Joint work with [Benjamin Jarvis](https://liu.se/en/employee/benja42) at the [Institute for Analytical Sociology (IAS)](https://liu.se/en/research/computational-and-analytical-sociology), Linköping University, presented at the [CS2Nordics conference](https://nosocss.org/) (Nordic Conference on Computational Social Science) on September 21, 2026.
 
-![](venues_amb.png)
+![](venues_abm.png)
 
 Venues as an important element of residential segregation.
 
