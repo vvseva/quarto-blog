@@ -2,7 +2,7 @@
 title: "Replicative experiments"
 author: "Vsevolod Suschevskiy"
 date: "2024-06-01"
-categories: [experiment, open science]
+categories: [Essays, Open Science]
 image: "proposal.png"
 ---
 

@@ -3,7 +3,7 @@ title: "Investigating the Analytical Robustness of the Social and Behavioural Sc
 subtitle: "Fifty percent of findings are not robust to a multi-analyst approach. Kind of."
 author: "Vsevolod Suschevskiy"
 date: "2026-04-15"
-categories: [news, publication, open science]
+categories: [Essays, Open Science]
 image: "multi100_robustness.png"
 ---
 

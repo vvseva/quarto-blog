@@ -2,7 +2,7 @@
 title: "Starting a PhD at Linköping University"
 author: "Vsevolod Suschevskiy"
 date: "2025-06-01"
-categories: [news]
+categories: [Active PhD Research]
 image: "liu.jpg"
 ---
 

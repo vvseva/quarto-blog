@@ -2,7 +2,7 @@
 title: "self-nudging"
 author: "Vsevolod Suschevskiy"
 date: "2020-06-01"
-categories: [experiment]
+categories: [Essays, Experiment]
 image: "nudging.png"
 ---
 

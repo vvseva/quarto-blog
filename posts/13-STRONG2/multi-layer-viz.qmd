@@ -2,7 +2,7 @@
 title: "Viz: Interactive Forestplot"
 author: "Vsevolod Suschevskiy"
 date: "2024-12-12"
-categories: [experiment, visualization]
+categories: [Visualizations & Apps, Experiment]
 image: "demo-viz.gif"
 ---
 

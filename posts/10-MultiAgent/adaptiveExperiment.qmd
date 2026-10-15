@@ -2,7 +2,7 @@
 title: "Multi-Agent Simulation"
 author: "Vsevolod Suschevskiy"
 date: "2024-07-24"
-categories: [simulation]
+categories: [Active PhD Research, Visualizations & Apps, Simulation]
 image: "streamlit.png"
 ---
 

@@ -2,7 +2,7 @@
 title: "Science of Science"
 author: "Vsevolod Suschevskiy"
 date: "2020-06-01"
-categories: [SNA]
+categories: [Talks, SNA]
 image: "icssi.png"
 ---
 

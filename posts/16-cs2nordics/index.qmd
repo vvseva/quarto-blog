@@ -2,7 +2,7 @@
 title: "Venue-based Interventions in an Agent-Based Model of Residential Segregation"
 author: "Vsevolod Suschevskiy"
 date: "2026-09-21"
-categories: [simulation, presentation, news]
+categories: [Active PhD Research, Talks, Simulation]
 image: "venues_abm.png"
 description: "Presented joint work with Benjamin Jarvis at CS2Nordics 2026 exploring how activity spaces and venue interventions impact residential segregation in agent-based models."
 ---
@@ -28,7 +28,7 @@ Below are the slides from the CS2Nordics presentation:
 ## In the model world:
 
 - Local interventions change micro and meso level outcomes
-- Macro level phenomenon are stable to local interventions ― reshuffling of segregation
+- Macro level phenomenon are stable to local interventions: reshuffling of segregation
 - Systematic Interventions change micro, meso, and macro level outcomes
 
 ## In the real world:

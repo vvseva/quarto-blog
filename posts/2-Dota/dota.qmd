@@ -2,7 +2,7 @@
 title: "eSports Transfers"
 author: "Vsevolod Suschevskiy"
 date: "2018-08-01"
-categories: [SNA]
+categories: [Talks, SNA]
 image: "sunbelt-transfers.png"
 ---
 

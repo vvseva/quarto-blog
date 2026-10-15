@@ -18,56 +18,108 @@ title-block-banner: false
 :::
 
 ```{=html}
+<style>
+.project-filter-container {
+  margin-bottom: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.project-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.project-filter-btn {
+  font-family: "Chicago", "Monaco", monospace;
+  font-size: 12px;
+  background-color: #ffffff;
+  color: #000000;
+  border: 2px solid #000000;
+  padding: 6px 12px;
+  cursor: pointer;
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.3);
+  transition: all 0.1s ease;
+  user-select: none;
+}
+
+.project-filter-btn:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.3);
+}
+
+.project-filter-btn.active {
+  background-color: #000000;
+  color: #ffffff;
+  box-shadow: none;
+  transform: translate(1px, 1px);
+}
+</style>
+
+<div class="project-filter-container">
+  <div class="project-filter-bar" role="tablist" aria-label="Project categories">
+    <button class="project-filter-btn active" data-filter="all">All</button>
+    <button class="project-filter-btn" data-filter="Active PhD Research">Active PhD Research</button>
+    <button class="project-filter-btn" data-filter="Visualizations & Apps">Visualizations &amp; Apps</button>
+    <button class="project-filter-btn" data-filter="Talks">Talks</button>
+    <button class="project-filter-btn" data-filter="Essays">Essays</button>
+  </div>
+</div>
+
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   const timeline = document.querySelector('.timeline-container');
-  if (!timeline) return;
-  
-  // Get all gallery cards
   const cards = document.querySelectorAll('.gallery-card[data-date]');
   if (!cards.length) return;
-  
-  // Extract unique dates
-  const dateMap = new Map();
-  cards.forEach(card => {
-    const dateStr = card.getAttribute('data-date');
-    if (dateStr && !dateMap.has(dateStr)) {
-      const date = new Date(dateStr);
-      dateMap.set(dateStr, {
-        date,
-        year: date.getFullYear(),
-        month: date.toLocaleString('en', { month: 'short' })
-      });
-    }
-  });
-  
-  // Sort dates descending
-  const sortedEntries = Array.from(dateMap.entries())
-    .sort((a, b) => b[1].date - a[1].date);
-  
-  // Create timeline items
-  sortedEntries.forEach(([dateStr, dateInfo]) => {
-    const timelineItem = document.createElement('div');
-    timelineItem.className = 'timeline-item';
-    timelineItem.setAttribute('data-date', dateStr);
-    timelineItem.innerHTML = `<span class="timeline-year">${dateInfo.year}</span><span class="timeline-month">${dateInfo.month}</span>`;
+
+  function buildTimeline() {
+    if (!timeline) return;
+    timeline.innerHTML = '';
     
-    timelineItem.addEventListener('click', function() {
-      const card = document.querySelector(`.gallery-card[data-date="${dateStr}"]`);
-      if (card) {
-        card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    // Only build timeline for visible cards
+    const visibleCards = Array.from(cards).filter(c => c.style.display !== 'none');
+    const dateMap = new Map();
+    
+    visibleCards.forEach(card => {
+      const dateStr = card.getAttribute('data-date');
+      if (dateStr && !dateMap.has(dateStr)) {
+        const date = new Date(dateStr);
+        dateMap.set(dateStr, {
+          date,
+          year: date.getFullYear(),
+          month: date.toLocaleString('en', { month: 'short' })
+        });
       }
     });
-    
-    timeline.appendChild(timelineItem);
-  });
-  
-  // Update active item on scroll
+
+    const sortedEntries = Array.from(dateMap.entries())
+      .sort((a, b) => b[1].date - a[1].date);
+
+    sortedEntries.forEach(([dateStr, dateInfo]) => {
+      const timelineItem = document.createElement('div');
+      timelineItem.className = 'timeline-item';
+      timelineItem.setAttribute('data-date', dateStr);
+      timelineItem.innerHTML = `<span class="timeline-year">${dateInfo.year}</span><span class="timeline-month">${dateInfo.month}</span>`;
+
+      timelineItem.addEventListener('click', function() {
+        const card = document.querySelector(`.gallery-card[data-date="${dateStr}"]`);
+        if (card) {
+          card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      });
+
+      timeline.appendChild(timelineItem);
+    });
+  }
+
   function updateActive() {
+    if (!timeline) return;
     const items = timeline.querySelectorAll('.timeline-item');
     items.forEach(item => item.classList.remove('active'));
-    
-    for (let card of cards) {
+
+    const visibleCards = Array.from(cards).filter(c => c.style.display !== 'none');
+    for (let card of visibleCards) {
       const rect = card.getBoundingClientRect();
       if (rect.top < window.innerHeight * 0.6 && rect.bottom > window.innerHeight * 0.4) {
         const dateStr = card.getAttribute('data-date');
@@ -79,20 +131,43 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }
   }
-  
+
+  // Segment filter button click handling
+  const filterBtns = document.querySelectorAll('.project-filter-btn');
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', function() {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
+      const selected = this.getAttribute('data-filter');
+
+      cards.forEach(card => {
+        if (selected === 'all') {
+          card.style.display = '';
+        } else {
+          const cardCats = Array.from(card.querySelectorAll('.listing-category')).map(c => c.textContent.trim());
+          if (cardCats.includes(selected)) {
+            card.style.display = '';
+          } else {
+            card.style.display = 'none';
+          }
+        }
+      });
+
+      buildTimeline();
+      updateActive();
+    });
+  });
+
+  buildTimeline();
   window.addEventListener('scroll', updateActive);
   updateActive();
 
-  // --- Category deselect on second click ---
-  // Quarto marks active categories with aria-pressed="true".
-  // After Quarto toggles a category off, if no categories remain active,
-  // ensure all items are visible again.
+  // Category deselect on second click in Quarto sidebar
   function attachCategoryToggle() {
     const listingEl = document.getElementById('posts');
     const categoryBtns = document.querySelectorAll('.quarto-listing-category .category');
 
     function showAllItems() {
-      // Remove inline display:none from all listing cards and their containers
       const allItems = listingEl
         ? listingEl.querySelectorAll('[data-listing-categories], .gallery-card, .gallery-card-compact')
         : document.querySelectorAll('[data-listing-categories], .gallery-card, .gallery-card-compact');
@@ -101,13 +176,14 @@ document.addEventListener('DOMContentLoaded', function() {
         const li = el.closest('li');
         if (li) li.style.removeProperty('display');
       });
-      // Also clear any outer container that Quarto may have hidden
       document.querySelectorAll('[data-listing-category]').forEach(el => {
         el.style.removeProperty('display');
       });
       document.querySelectorAll('.listing-no-matching').forEach(el => {
         el.style.display = 'none';
       });
+      buildTimeline();
+      updateActive();
     }
 
     categoryBtns.forEach(btn => {
@@ -115,24 +191,27 @@ document.addEventListener('DOMContentLoaded', function() {
         const wasActive = this.getAttribute('aria-pressed') === 'true' ||
                           this.classList.contains('active');
         if (wasActive) {
-          // This button was active — Quarto will toggle it off.
-          // Wait one animation frame + a short tick so Quarto's synchronous
-          // handler and any pending DOM updates complete before we check.
           requestAnimationFrame(() => setTimeout(() => {
             const anyActive = [...categoryBtns].some(b =>
               b.getAttribute('aria-pressed') === 'true' || b.classList.contains('active')
             );
             if (!anyActive) {
               showAllItems();
+            } else {
+              buildTimeline();
+              updateActive();
             }
+          }, 0));
+        } else {
+          requestAnimationFrame(() => setTimeout(() => {
+            buildTimeline();
+            updateActive();
           }, 0));
         }
       });
     });
   }
 
-  // Attach after DOM is ready and Quarto's listing JS has had time to initialise.
-  // We poll until the category buttons are present, then attach once.
   (function waitForCategories(attempts) {
     const btns = document.querySelectorAll('.quarto-listing-category .category');
     if (btns.length > 0) {
@@ -140,7 +219,7 @@ document.addEventListener('DOMContentLoaded', function() {
     } else if (attempts > 0) {
       setTimeout(() => waitForCategories(attempts - 1), 100);
     }
-  })(20); // up to 2 seconds of retries
+  })(20);
 });
 </script>
 ```
