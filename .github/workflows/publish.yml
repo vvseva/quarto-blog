@@ -1,24 +1,41 @@
-on:
-  workflow_dispatch:
-  push:
-    branches: master
+name: Deploy Quarto to GitHub Pages
 
-name: Quarto Publish
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
-  build-deploy:
+  build-and-deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
-        uses: actions/checkout@v5 
-        
+        uses: actions/checkout@v4
+
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
-      - name: Render and Publish 
-        uses: quarto-dev/quarto-actions/publish@v2
+      - name: Render Quarto Website
+        uses: quarto-dev/quarto-actions/render@v2
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          target: connect
-          CONNECT_SERVER: ${{ secrets.CONNECT_SERVER }}
-        env:
-          CONNECT_API_KEY: ${{ secrets.CONNECT_API_KEY }}
+          path: ./_site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+

@@ -19,8 +19,8 @@ Local developer workflow (commands you can run locally)
 
 CI / Publish behavior
 - GitHub Actions workflow: `.github/workflows/publish.yml`. It triggers on `push` to `master` and on manual `workflow_dispatch`.
-- The workflow uses `quarto-dev/quarto-actions/setup@v2` and `quarto-dev/quarto-actions/publish@v2` with `target: connect` and expects `secrets.CONNECT_SERVER` and `secrets.CONNECT_API_KEY` to be present.
-- To publish the site manually/mimic CI locally, use `quarto publish connect` (requires authorization to the target Posit Connect server).
+- The workflow uses `quarto-dev/quarto-actions/setup@v2` and `quarto-dev/quarto-actions/render@v2` to render the site into `_site/`, then deploys to GitHub Pages via `actions/deploy-pages@v4`.
+- GitHub Pages build & deployment source in the repository settings should be set to "GitHub Actions".
 
 Project-specific conventions & patterns
 - Execution freeze: `_quarto.yml` sets `execute: freeze: true`. Many pages rely on frozen results in `_freeze/`; prefer editing source and re-rendering rather than editing the frozen outputs.
