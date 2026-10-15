@@ -12,11 +12,11 @@ website:
   google-analytics: "G-Y7VNLGL37W"
   navbar:
     right:
+      - publications.qmd
       - projects.qmd
       - teaching.qmd
-      - text: "Publications"
-        href: "https://scholar.google.com/citations?hl=en&user=TycFXMIAAAAJ&view_op=list_works&sortby=pubdate"
-        target: _blank
+      - text: "CV"
+        href: cv/cv_page.qmd
       - icon: github
         href: https://github.com/vvseva
         target: _blank

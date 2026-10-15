@@ -1,0 +1,57 @@
+---
+title: "Publications"
+page-layout: article
+title-block-banner: false
+---
+
+::: {.system-window .system-featured style="margin-bottom: 1.5rem;"}
+::: system-titlebar
+[Publications]{.system-title}
+:::
+
+::: system-content
+I work on computational social science, agent-based models, and interactive visualization at the [Institute for Analytical Sociology (IAS)](https://liu.se/en/research/computational-and-analytical-sociology), Linköping University.
+
+This list is pulled from my Google Scholar profile and cached locally so it does not query Google on every site build. To update it, run `Rscript scripts/update_publications.R`. You can also check my [Google Scholar profile](https://scholar.google.com/citations?hl=en&user=TycFXMIAAAAJ){target="_blank"} directly or read my [CV](cv/cv_page.html).
+:::
+:::
+
+## Working papers and presentations
+
+:::: {.system-window style="margin-bottom: 1.5rem;"}
+::: system-titlebar
+[CS2Nordics (2026)]{.system-title}
+:::
+::: system-content
+### Venue-based Interventions in an Agent-Based Model of Residential Segregation
+
+**V Suschevskiy**, B Jarvis (2026).  
+Presented at the Nordic Conference on Computational Social Science (CS2Nordics 2026), Linköping, Sweden.
+
+We look at how daily activity spaces (venues, amenities) interact with residential choices in agent-based models of segregation. Local interventions reshape micro and meso segregation patterns, but changing macro-level segregation dynamics requires systemic policy interventions.
+
+<div style="font-size: 12px; display: flex; gap: 12px; flex-wrap: wrap; margin-top: 8px;">
+<a href="posts/16-cs2nordics/index.html">Conference slides and notes</a> <span style="color: #bbb;">|</span> <a href="https://docs.google.com/presentation/d/1LcFx77eBKyx7nR3h0flB_x9KIStEFvoIG8pIJg7Ib3s/edit?usp=sharing" target="_blank">Google Slides</a>
+</div>
+:::
+::::
+
+:::: {.system-window style="margin-bottom: 1.5rem;"}
+::: system-titlebar
+[Learning @ Scale (2024)]{.system-title}
+:::
+::: system-content
+### Adaptive Experimentation in Learning Engineering: Communication and Choice Strategies. A Study Design
+
+I Musabirov, **V Suschevskiy**, H Song (2024).  
+Learning @ Scale 2024, 5th Workshop on A/B Testing and Platform-Enabled Learning Research.
+
+<div style="font-size: 12px; display: flex; gap: 12px; flex-wrap: wrap; margin-top: 8px;">
+<a href="posts/9-AdaptiveExperiments/adaptiveExperiment.html">Project notes</a>
+</div>
+:::
+::::
+
+## Publications from Google Scholar
+
+{{< include _publications_list.qmd >}}

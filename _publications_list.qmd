@@ -1,0 +1,57 @@
+::: {.system-window}
+::: system-titlebar
+[Google Scholar Articles]{.system-title}
+:::
+
+::: system-content
+<ul class="system-publications-list" style="margin-top: 0.5rem;">
+  <li style="margin-bottom: 1rem; padding-bottom: 0.8rem; border-bottom: 1px dotted #ccc;">
+    <span class="pub-title" style="font-size: 14px; margin-bottom: 4px;"><a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=TycFXMIAAAAJ&citation_for_view=TycFXMIAAAAJ:0EnyYjriUFMC" target="_blank">Investigating the analytical robustness of the social and behavioural sciences</a></span>
+    <div style="font-size: 13px; color: #333; margin-bottom: 3px;">B Aczel, B Szaszi, HT Clelland, M Kovacs, F Holzmeister, ...</div>
+    <div style="font-size: 12px; color: #666; margin-bottom: 6px;"><em>Nature, 652 (8108), 135-142, 2026</em></div>
+    <div style="font-size: 12px; display: flex; gap: 10px; flex-wrap: wrap;"><a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=TycFXMIAAAAJ&citation_for_view=TycFXMIAAAAJ:0EnyYjriUFMC" target="_blank">Google Scholar</a> <span style="color: #bbb;">|</span> <a href="posts/17-multi100/index.html">Reflections on Multi100</a> <span style="color: #bbb;">|</span> <span>54 citations</span></div>
+  </li>
+  <li style="margin-bottom: 1rem; padding-bottom: 0.8rem; border-bottom: 1px dotted #ccc;">
+    <span class="pub-title" style="font-size: 14px; margin-bottom: 4px;"><a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=TycFXMIAAAAJ&citation_for_view=TycFXMIAAAAJ:roLk4NBRz8UC" target="_blank">Student engagement profiles in a mobile app: Links to self-regulated learning and performance</a></span>
+    <div style="font-size: 13px; color: #333; margin-bottom: 3px;">J Wong, M Khalil, <strong>V Suschevskiy</strong>, M Baars, B De Koning, F Paas</div>
+    <div style="font-size: 12px; color: #666; margin-bottom: 6px;"><em>Educational technology research and development, 74 (2), 617-637, 2026</em></div>
+    <div style="font-size: 12px; display: flex; gap: 10px; flex-wrap: wrap;"><a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=TycFXMIAAAAJ&citation_for_view=TycFXMIAAAAJ:roLk4NBRz8UC" target="_blank">Google Scholar</a> <span style="color: #bbb;">|</span> <a href="posts/14-EngagementApp/learning_app.html">Project notes</a> <span style="color: #bbb;">|</span> <span>8 citations</span></div>
+  </li>
+  <li style="margin-bottom: 1rem; padding-bottom: 0.8rem; border-bottom: 1px dotted #ccc;">
+    <span class="pub-title" style="font-size: 14px; margin-bottom: 4px;"><a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=TycFXMIAAAAJ&citation_for_view=TycFXMIAAAAJ:LkGwnXOMwfcC" target="_blank">A Comment on" Se Habla Español: Spanish-Language Appeals and Candidate Evaluations in the United States"</a></span>
+    <div style="font-size: 13px; color: #333; margin-bottom: 3px;">E Cruz Cortés, J Lee, E Lehoucq, <strong>V Suschevskiy</strong></div>
+    <div style="font-size: 12px; color: #666; margin-bottom: 6px;"><em>I, I4R Discussion Paper Series, 2024</em></div>
+    <div style="font-size: 12px; display: flex; gap: 10px; flex-wrap: wrap;"><a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=TycFXMIAAAAJ&citation_for_view=TycFXMIAAAAJ:LkGwnXOMwfcC" target="_blank">Google Scholar</a> <span style="color: #bbb;">|</span> <a href="posts/12-I4R/I4R.html">Replication walkthrough</a></div>
+  </li>
+  <li style="margin-bottom: 1rem; padding-bottom: 0.8rem; border-bottom: 1px dotted #ccc;">
+    <span class="pub-title" style="font-size: 14px; margin-bottom: 4px;"><a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=TycFXMIAAAAJ&citation_for_view=TycFXMIAAAAJ:W7OEmFMy1HYC" target="_blank">Creating a Course Recommendation System for Exchange Students</a></span>
+    <div style="font-size: 13px; color: #333; margin-bottom: 3px;"><strong>V Suschevskiy</strong>, M Khalil</div>
+    <div style="font-size: 12px; color: #666; margin-bottom: 6px;"><em>Companion Proceedings, 11th International Conference on Learning Analytics …, 2021</em></div>
+    <div style="font-size: 12px; display: flex; gap: 10px; flex-wrap: wrap;"><a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=TycFXMIAAAAJ&citation_for_view=TycFXMIAAAAJ:W7OEmFMy1HYC" target="_blank">Google Scholar</a> <span style="color: #bbb;">|</span> <a href="posts/3-CERES/ceres.html">Project writeup</a> <span style="color: #bbb;">|</span> <span>2 citations</span></div>
+  </li>
+  <li style="margin-bottom: 1rem; padding-bottom: 0.8rem; border-bottom: 1px dotted #ccc;">
+    <span class="pub-title" style="font-size: 14px; margin-bottom: 4px;"><a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=TycFXMIAAAAJ&citation_for_view=TycFXMIAAAAJ:2osOgNQ5qMEC" target="_blank">Teaching Undergraduate Sociologists Modeling and Computational Thinking</a></span>
+    <div style="font-size: 13px; color: #333; margin-bottom: 3px;">I Musabirov, <strong>V Suschevskiy</strong></div>
+    <div style="font-size: 12px; color: #666; margin-bottom: 6px;"><em>Proceedings of the, 51st ACM Technical Symposium on Computer Science …, 2020</em></div>
+    <div style="font-size: 12px; display: flex; gap: 10px; flex-wrap: wrap;"><a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=TycFXMIAAAAJ&citation_for_view=TycFXMIAAAAJ:2osOgNQ5qMEC" target="_blank">Google Scholar</a> <span style="color: #bbb;">|</span> <span>1 citations</span></div>
+  </li>
+  <li style="margin-bottom: 1rem; padding-bottom: 0.8rem; border-bottom: 1px dotted #ccc;">
+    <span class="pub-title" style="font-size: 14px; margin-bottom: 4px;"><a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=TycFXMIAAAAJ&citation_for_view=TycFXMIAAAAJ:u5HHmVD_uO8C" target="_blank">Analysis of players transfers in esports. The case of dota 2</a></span>
+    <div style="font-size: 13px; color: #333; margin-bottom: 3px;">E Marchenko, <strong>V Suschevskiy</strong></div>
+    <div style="font-size: 12px; color: #666; margin-bottom: 6px;"><em>Proceedings of the, 22nd international academic mindtrek conference, 255-257, 2018</em></div>
+    <div style="font-size: 12px; display: flex; gap: 10px; flex-wrap: wrap;"><a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=TycFXMIAAAAJ&citation_for_view=TycFXMIAAAAJ:u5HHmVD_uO8C" target="_blank">Google Scholar</a> <span style="color: #bbb;">|</span> <a href="posts/2-Dota/dota.html">Dota 2 transfers post</a> <span style="color: #bbb;">|</span> <span>13 citations</span></div>
+  </li>
+  <li style="margin-bottom: 1rem; padding-bottom: 0.8rem; border-bottom: 1px dotted #ccc;">
+    <span class="pub-title" style="font-size: 14px; margin-bottom: 4px;"><a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=TycFXMIAAAAJ&citation_for_view=TycFXMIAAAAJ:u-x6o8ySG0sC" target="_blank">Network Analysis of Players Transfers in eSports: The Case of Dota 2</a></span>
+    <div style="font-size: 13px; color: #333; margin-bottom: 3px;"><strong>V Suschevskiy</strong>, E Marchenko</div>
+    <div style="font-size: 12px; color: #666; margin-bottom: 6px;"><em>International Conference on Digital Transformation and Global Society, 468-473, 2018</em></div>
+    <div style="font-size: 12px; display: flex; gap: 10px; flex-wrap: wrap;"><a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=TycFXMIAAAAJ&citation_for_view=TycFXMIAAAAJ:u-x6o8ySG0sC" target="_blank">Google Scholar</a> <span style="color: #bbb;">|</span> <a href="posts/2-Dota/dota.html">Conference paper details</a> <span style="color: #bbb;">|</span> <span>1 citations</span></div>
+  </li>
+  <li style="margin-bottom: 1rem; padding-bottom: 0.8rem; ">
+    <span class="pub-title" style="font-size: 14px; margin-bottom: 4px;"><a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=TycFXMIAAAAJ&citation_for_view=TycFXMIAAAAJ:_FxGoFyzp5QC" target="_blank">Motivational Nudges in Citizen Science: Experimental Approach</a></span>
+    <div style="font-size: 13px; color: #333; margin-bottom: 3px;"><strong>V Suschevskiy</strong></div>
+    <div style="font-size: 12px; display: flex; gap: 10px; flex-wrap: wrap;"><a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=TycFXMIAAAAJ&citation_for_view=TycFXMIAAAAJ:_FxGoFyzp5QC" target="_blank">Google Scholar</a></div>
+  </li>
+</ul>
+:::
+:::
