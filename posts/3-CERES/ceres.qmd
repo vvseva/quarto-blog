@@ -2,11 +2,11 @@
 title: "CERES"
 author: "Vsevolod Suschevskiy"
 date: "2020-04-20"
-categories: [Visualizations & Apps, Experiment]
+categories: [Visualizations & Apps, Experiment, Publication]
 image: "ceres.jpg"
 ---
 
-I was working as a RA at University of Bergen and created a course recommendation systems, using R Shiny that was integrated with Elasticsearch and doc2vec embedding model. [Poster](https://www.researchgate.net/profile/Vsevolod-Suschevskiy-2/publication/350874550_Creating_a_Course_Recommendation_System_for_Exchange_Students/links/607fdaa98ea909241e12687c/Creating-a-Course-Recommendation-System-for-Exchange-Students.pdf).
+I was working as a Research Assistant at University of Bergen and created a course recommendation systems, using R Shiny that was integrated with Elasticsearch and doc2vec embedding model. [Poster](https://www.researchgate.net/publication/350874550_Creating_a_Course_Recommendation_System_for_Exchange_Students).
 
 ![](sequence%20diagram.png)
 
@@ -17,3 +17,7 @@ The interface included a small survey about motivations and priorities of exchan
 Some preliminary results from the survey about important factors for an exchange term.
 
 ![](likert.png)
+
+
+[A full citation](https://www.researchgate.net/publication/350874550_Creating_a_Course_Recommendation_System_for_Exchange_Students):
+Suschevskiy, V., & Khalil, M. (2020). Creating a course recommendation system for exchange students. Companion Proceedings of the Learning Analytics & Knowledge 2020, LAK’20.

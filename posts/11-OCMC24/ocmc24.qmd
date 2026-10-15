@@ -2,7 +2,7 @@
 title: "OCMC24"
 author: "Vsevolod Suschevskiy"
 date: "2024-08-31"
-categories: [Talks]
+categories: [Conference]
 image: "hosts.png"
 ---
 

@@ -2,7 +2,7 @@
 title: "init"
 author: "Vsevolod Suschevskiy"
 date: "2024-05-15"
-categories: [Essays]
+categories: [Blog]
 image: "trolley.png"
 ---
 
